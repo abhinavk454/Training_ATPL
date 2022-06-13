@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 7px;
+}
+
+.header {
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: pink;
+  height: 50px;
+}
+
+#user {
+  /* background-color: white; */
+  border-radius: 50px;
+}
+
+input {
+  border-radius: 7px;
+  border: none;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form1,
+.form2,
+.form3 {
+  margin-top: 20px;
+  padding: 7px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* height: 300px; */
+  border-radius: 2px;
+  /* border: 2px solid gray; */
+  box-shadow: 0 0 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: none;
+  background-color: pink;
+  border-radius: 12px;
+  margin: 8px;
+  box-shadow: 0 0 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 8px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 0 5px;
+}
+
+.car1,
+.car2,
+.car3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+  width: 300px;
+  height: 130px;
+  background-color: pink;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 2px;
+  width: 100%;
+}
