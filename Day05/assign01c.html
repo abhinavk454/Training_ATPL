@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polaroid Image Showcase</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        text-align: center;
+        color: rgb(250, 134, 10);
+      }
+      img {
+        width: 200px;
+        height: 300px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        /* margin-left: 10px; */
+        /* border-radius: ; */
+        opacity: 0.9;
+      }
+      .upper-left,
+      .upper-right,
+      .lower-left,
+      .lower-right {
+        border: 0px solid white;
+        /* padding: px; */
+        margin: 25px;
+        width: 230px;
+        box-shadow: 0px 0px 30px rgb(250, 134, 10);
+      }
+      .upper,
+      .lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 32px;
+        background: -webkit-linear-gradient(#eee, rgb(250, 134, 10));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Polaroid Image Showcase</h1>
+    <br />
+    <div class="container">
+      <div class="upper">
+        <div class="upper-left">
+          <img src="./nature.png" alt="" />
+        </div>
+        <div class="upper-right">
+          <img src="./n2.png" alt="" />
+        </div>
+      </div>
+      <div class="lower">
+        <div class="lower-left">
+          <img src="./n3.png" alt="" />
+        </div>
+        <div class="lower-right">
+          <img src="./n4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

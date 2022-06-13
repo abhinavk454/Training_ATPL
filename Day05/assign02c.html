@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      div {
+        background-color: #b2acac;
+        padding: 20px;
+        border-radius: 4px;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 15px 25px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid rgb(73, 224, 27);
+        border-radius: 4px;
+        font-weight: 500;
+      }
+      label {
+        font-weight: 500;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: rgb(64, 198, 40);
+        color: white;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid blue;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <label for="fname"> Enter First Name </label>
+        <input type="text" name="fname" placeholder="Your First Name" />
+
+        <label for="sname"> Enter Last Name </label>
+        <input type="text" name="sname" placeholder="Your Last Name" />
+
+        <label for="country">Select the Country</label>
+        <select name="country">
+          <option value="">Select Country</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+        </select>
+
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </div>
+  </body>
+</html>

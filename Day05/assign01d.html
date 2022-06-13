@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        /* margin: 80px; */
+        width: 80%;
+        /* height: 80%; */
+        margin-top: 125px;
+        margin-left: 10%;
+        background-color: rgb(255, 74, 50);
+        border-radius: 20px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .left {
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+        /* background-color: rgb(255, 74, 50); */
+        /* background-image: url("./n2.png"); */
+      }
+
+      .left h1 {
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+      .left p {
+        /* font-size: 20px; */
+        color: white;
+        margin-top: 50px;
+      }
+
+      .left button {
+        background-color: rgb(255, 74, 50);
+        color: white;
+        padding: 10px;
+        border-radius: 25px;
+        border: 2px solid;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .right {
+        width: 50%;
+        background-color: aliceblue;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .form {
+        /* background-color: #b2acac; */
+        padding: 20px;
+        /* border-radius: 4px; */
+        border: none;
+      }
+      /* 255,74,50 */
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px 25px;
+        margin: 10px 0;
+        display: inline-block;
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        background-color: rgb(228, 223, 223);
+      }
+      input[type="submit"] {
+        width: 39%;
+        background-color: rgb(255, 74, 50);
+        color: white;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+      h1 {
+        font-size: 34px;
+        font-weight: 900;
+        margin: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sign in/up Form</h1>
+    <div class="container">
+      <div class="left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button>SIGN IN</button>
+      </div>
+      <div class="right">
+        <h1>Create an Account</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <div class="form">
+          <form>
+            <input type="text" name="fname" placeholder="Your Name" />
+
+            <input type="text" name="sname" placeholder="Your Email" />
+            <input type="password" name="pass" placeholder="Password" />
+
+            <input type="submit" value="SUBMIT" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
