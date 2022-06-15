@@ -1,0 +1,36 @@
+use('emp');
+
+
+// Insertion
+
+// db.pets.insertOne({name: "Mikey", species: "Gerbil"})
+// db.pets.insertOne({name: "Davey Bungooligan", species: "Piranha"})
+// db.pets.insertOne({name: "Suzy B", species: "Cat"})
+// db.pets.insertOne({name: "Mikey", species: "Hotdog"})
+// db.pets.insertOne({name: "Terrence", species: "Sausagedog"})
+// db.pets.insertOne({name: "Philomena Jones", species: "Cat"})
+
+// Queries
+
+// Add another piranha, and a naked mole rat called Henry.
+// db.pets.insertOne({name: "Henry", species: "Mole Rat"})
+// db.pets.insertOne({name: "Piranha", species: "Piranha"})
+
+// Use find to list all the pets. Find the ID of Mikey the Gerbil.
+// db.pets.find({})
+// db.pets.find({name: "Mikey", species: "Gerbil"}, {_id: 1})
+
+// Use find to find Mikey by id.
+// db.pets.find({_id: ObjectId("62a9a00dbd5c6f85d7f3b301")})
+
+// Use find to find all the gerbils.
+// db.pets.find({species:"Gerbil"})
+
+// Find all the creatures named Mikey.
+// db.pets.find({name: "Mikey"})
+
+// Find all the creatures named Mikey who are gerbils.
+// db.pets.find({name: "Mikey", species: "Gerbil"})
+
+// Find all the creatures with the string "dog" in their species.
+// db.pets.find({species: /dog/})

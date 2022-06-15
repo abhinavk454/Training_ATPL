@@ -16,7 +16,9 @@ use('emp');
 // db.employee.find({name:/^R/}).pretty()
 
 // ends with K
-db.employee.find({name:/K$/}).pretty()
+// db.employee.find({name:/K$/}).pretty()
 
 //regex
-db.employee.find({name:{$regex:/^S/}}).pretty()
+// db.employee.find({name:{$regex:/^S/}}).pretty()
+
+db.employee.find({},{name:0,_id:0}).pretty()
