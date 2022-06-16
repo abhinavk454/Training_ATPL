@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Example 11</title>
+    <script>
+      function calcBill() {
+        total = 0;
+        b = document.f.burger.checked;
+        f = document.f.fries.checked;
+        p = document.f.pizza.checked;
+        ci = "";
+        if (b == "" && f == "" && p == "") {
+          alert("Please select at least one item");
+        } else {
+          if (b == true) {
+            ci += " Burger";
+            total += 150;
+          }
+          if (f == true) {
+            ci += " Fries";
+            total += 80;
+          }
+          if (p == true) {
+            ci += " Pizza";
+            total += 300;
+          }
+        }
+        alert("You have selected : " + ci);
+        document.f.t.value = total;
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        box-shadow: 0 0 10px;
+      }
+      body * {
+        margin: 6px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <form name="f" action="">
+        <h3>Select Your Food</h3>
+        <div class="sel">
+          <input type="checkbox" name="burger" /> Burger <br />
+          <input type="checkbox" name="fries" /> Fries <br />
+          <input type="checkbox" name="pizza" /> Pizza <br />
+        </div>
+        <input
+          type="button"
+          name="bill"
+          value="Calculate Bill"
+          onClick="calcBill()"
+        />
+        <br />
+        <input type="text" name="t" />
+      </form>
+    </div>
+    <div class="right"></div>
+  </body>
+</html>
