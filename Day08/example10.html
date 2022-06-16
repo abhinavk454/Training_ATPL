@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Class Assignment01</title>
+    <script>
+      function checkGender() {
+        g1 = document.f.m[0].checked;
+        g2 = document.f.m[1].checked;
+        //alert(g1);
+        //alert(g2);
+        fnl = "";
+        if (g1 == false && g2 == false) {
+          alert("Please select gender.");
+        } else {
+          if (g1 == true) {
+            fnl = "Male";
+          }
+          if (g2 == true) {
+            fnl = "Female";
+          }
+        }
+        alert("Gender is : " + fnl);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="f">
+      <h3>Select Your Gender</h3>
+      <input type="radio" name="m" value="male" />Male
+      <input type="radio" name="m" value="male" />Female
+      <input type="button" name="b1" value="Submit" onClick="checkGender()" />
+    </form>
+  </body>
+</html>

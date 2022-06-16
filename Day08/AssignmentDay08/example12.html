@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Coversion Table</title>
+    <script></script>
+    <link rel="stylesheet" href="./assign.css" />
+    <script src="./assign.js"></script>
+  </head>
+  <body>
+    <h1>Conversion Table</h1>
+    <div class="main">
+      <div class="left">
+        <form action="" name="f1">
+          <h2 class="tf">Temperature Converter</h2>
+          <div class="r1">
+            <label for="c" class="l1">Enter Temperature (.C)</label>
+            <input type="number" name="c" placeholder="In Celcius" />
+          </div>
+          <div class="r2">
+            <label for="button">To Kelvin</label>
+            <input type="button" value="Click" name="b1" onClick="toKelvin()" />
+          </div>
+          <div class="r3">
+            <label for="button">To Fahrenheit</label>
+            <input type="button" value="Click" name="b2" onClick="toFahr()" />
+          </div>
+          <div class="r4">
+            <label for="out">Output </label>
+            <input type="number" name="out" placeholder="Output" />
+          </div>
+        </form>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="main1" id="g1">
+      <div class="left">
+        <form action="" name="f2">
+          <h2 class="tf">Height Converter</h2>
+          <div class="r1">
+            <label for="c" class="l1">Enter Height (FT)</label>
+            <input type="number" name="c1" placeholder="In Feet" />
+          </div>
+          <div class="r2">
+            <label for="button">To Centimeter</label>
+            <input type="button" value="Click" name="b3" onClick="toCenti()" />
+          </div>
+          <div class="r3">
+            <label for="button">To Inch</label>
+            <input type="button" value="Click" name="b4" onClick="toInch()" />
+          </div>
+          <div class="r4">
+            <label for="out">Output </label>
+            <input type="number" name="out1" placeholder="Output" />
+          </div>
+        </form>
+      </div>
+      <div class="right" id="r1"></div>
+    </div>
+    <div class="main2" id="g2">
+      <div class="left">
+        <h2 class="tf">Distance Converter</h2>
+        <form action="" name="f3">
+          <div class="r1">
+            <label for="c" class="l1">Enter Distance (KM)</label>
+            <input type="number" name="c2" placeholder="In KM" />
+          </div>
+          <div class="r2">
+            <label for="button">To Miles</label>
+            <input type="button" value="Click" name="b5" onClick="toMiles()" />
+          </div>
+          <div class="r3">
+            <label for="button">To Nautical Miles</label>
+            <input type="button" value="Click" name="b6" onClick="toNautm()" />
+          </div>
+          <div class="r4">
+            <label for="out">Output </label>
+            <input type="number" name="out3" placeholder="Output" />
+          </div>
+        </form>
+      </div>
+      <div class="right" id="r2"></div>
+    </div>
+    <!-- 4th -->
+    <div class="main3" id="g3">
+      <div class="left">
+        <h2 class="tf">Weight Converter</h2>
+        <form action="" name="f4">
+          <div class="r1">
+            <label for="c" class="l1">Enter Weight (KG)</label>
+            <input type="number" name="c3" placeholder="In KG" />
+          </div>
+          <div class="r2">
+            <label for="button">To Pound</label>
+            <input type="button" value="Click" name="b6" onClick="toPound()" />
+          </div>
+          <div class="r3">
+            <label for="button">To Gram</label>
+            <input type="button" value="Click" name="b7" onClick="toGram()" />
+          </div>
+          <div class="r4">
+            <label for="out">Output </label>
+            <input type="number" name="out4" placeholder="Output" />
+          </div>
+        </form>
+      </div>
+      <div class="right" id="r3"></div>
+    </div>
+    <!-- 5th -->
+    <div class="main4" id="g4">
+      <div class="left">
+        <h2 class="tf">Time Converter</h2>
+        <form action="" name="f5">
+          <div class="r1">
+            <label for="c" class="l1">Enter Time (in Hour)</label>
+            <input type="number" name="c4" placeholder="In Hours" />
+          </div>
+          <div class="r2">
+            <label for="button">To Minutes</label>
+            <input type="button" value="Click" name="b8" onClick="toMinute()" />
+          </div>
+          <div class="r3">
+            <label for="button">To Seconds</label>
+            <input type="button" value="Click" name="b9" onClick="toSec()" />
+          </div>
+          <div class="r4">
+            <label for="out">Output </label>
+            <input type="number" name="out5" placeholder="Output" />
+          </div>
+        </form>
+      </div>
+      <div class="right" id="r4"></div>
+    </div>
+  </body>
+</html>

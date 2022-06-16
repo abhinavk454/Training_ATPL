@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+body {
+  background-color: #f0f8ff;
+  text-align: center;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  padding: 10px;
+}
+.main,
+.main1,
+.main2,
+.main3,
+.main4 {
+  width: 800px;
+  padding: 10p;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  box-shadow: 0 0 20px;
+  border-radius: 10px 15px;
+}
+.left {
+  width: 50%;
+  margin-right: 20px;
+}
+.tf {
+  background-color: yellow;
+  width: 80%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 0 10px;
+  text-shadow: 0 0 10px #4169e1;
+}
+.r1,
+.r2,
+.r3,
+.r4 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+.r1 *,
+.r2 *,
+.r3 *,
+.r4 * {
+  margin-right: 5px;
+}
+input[type="button"] {
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  padding: 10px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+input[type="button"]:hover {
+  background-color: #2f4f4f;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+input[type="number"] {
+  text-align: center;
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+#r1 {
+  background-image: url("./inch.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#r2 {
+  background-image: url("./dis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#r3 {
+  background-image: url("./weight.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#r4 {
+  background-image: url("./time.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.l1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#g1 {
+  background-color: slateblue;
+}
+#g2 {
+  background-color: burlywood;
+}
+#g3 {
+  background-color: slategrey;
+}
+#g4 {
+  background-color: burlywood;
+}
+#g4 {
+  background-color: yellowgreen;
+}
+h1 {
+  text-decoration: underline;
+  text-shadow: 0 0 10px;
+}

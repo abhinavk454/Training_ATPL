@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+
+function doSum()
+{
+ x=document.f1.input1.value;
+ y=document.f1.input2.value;
+ if(x=="")
+ {
+  alert("Empty Field.");
+ }
+ else if(y=="")
+ {
+  alert("Empty Field.");
+ }
+ else{
+ z=parseInt(x)+parseInt(y);
+ document.f1.output1.value=z;
+ }
+}
+
+</script>
+</head>
+<body>
+<form name="f1">
+<input type="number" name="input1" placeholder="Enter the Number1" />
+<br/>
+<input type="number" name="input2" placeholder="Enter the Number2" />
+<input type="button" name="b1" value="ADD" onClick="doSum()" />
+<br/>
+<input type="number" name="output1" placeholder="Output"/>
+</form>
+</body>
+</html>
