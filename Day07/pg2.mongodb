@@ -1,0 +1,24 @@
+use('emp');
+
+
+// db.employee.updateOne({name:"ST"},{$inc:{salary:8000}})
+// db.employee.updateOne({name:"ST"},{$inc:{salary:8000}}).pretty()
+// db.employee.updateMany({},{$inc:{salary:8000}},{multi:true})
+// db.employee.updateOne({name:"MSD"},{$set:{role:"C & WK"}})
+// db.employee.updateOne({name:"RS"},{$set:{remark:"WK"}})
+// db.employee.updateOne({no:11},{$set:{no:11,name:"AK",salary:11000,role:"coach"}},{upsert:true})
+// db.employee.updateOne({name:"RS"},{$unset:{remark:"WK"}})
+// db.employee.updateOne({name:"RD"},{$mul:{salary:2}})
+
+// starts with S
+// db.employee.find({name:/^S/}).pretty()
+
+// db.employee.find({name:/^R/}).pretty()
+
+// ends with K
+// db.employee.find({name:/K$/}).pretty()
+
+//regex
+// db.employee.find({name:{$regex:/^S/}}).pretty()
+
+db.employee.find({},{name:0,_id:0}).pretty()

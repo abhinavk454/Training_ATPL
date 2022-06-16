@@ -1,0 +1,2 @@
+db.getCollection("student").find({})
+// db.student.insertMany([{"roll":"2","name":"HettyT"},{"roll":"3","name":"Alpha"}])

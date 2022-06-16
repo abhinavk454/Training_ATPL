@@ -1,0 +1,90 @@
+use('emp');
+
+// Insertion of data into collection
+
+// data=[
+//     {
+//         custnumb: 124,
+//         custname: "Sally Adams",
+//         address: "481 OAK, LANSING, MI",
+//         balance: 418.75,
+//         credlim: 500,
+//         slsrnumb: 3,
+//     },
+//     {
+//         custnumb: 256,
+//         custname: "ANN SAMUELS",
+//         address: "215 PETE, GRANT, MI",
+//         balance: 10.75,
+//         credlim: 800,
+//         slsrnumb: 6,
+//     },
+//     {
+//         custnumb: 311,
+//         custname: "DON CHARLES",
+//         address: "48 COLLEGE, IRA, MI",
+//         balance: 200.10,
+//         credlim: 300,
+//         slsrnumb: 12,
+//     },
+//     {
+//         custnumb: 315,
+//         custname: "TOM DANIELS",
+//         address: "914 CHERRY, KENT, MI",
+//         balance: 320.75,
+//         credlim: 300,
+//         slsrnumb: 6,
+//     },
+//     {
+//         custnumb: 405,
+//         custname: "AL WILLIAMS",
+//         address: "519 WATSON, GRANT, MI",
+//         balance: 201.75,
+//         credlim: 800,
+//         slsrnumb: 12,
+//     },
+//     {
+//         custnumb: 412,
+//         custname: "SALLY ADAMS",
+//         address: "16 ELM, LANSING, MI",
+//         balance: 908.75,
+//         credlim: 1000,
+//         slsrnumb: 3,
+//     },
+//     {
+//         custnumb: 522,
+//         custname: "MARY NELSON",
+//         address: "108 PINE, ADA, MI",
+//         balance: 49.50,
+//         credlim: 800,
+//         slsrnumb: 12,
+//     },
+//     {
+//         custnumb: 567,
+//         custname: "JOE BAKER",
+//         address: "808 RIDGE, HARPER, MI",
+//         balance: 201.20,
+//         credlim: 300,
+//         slsrnumb: 6,
+//     },
+//     {
+//         custnumb: 587,
+//         custname: "JUDY ROBERTS",
+//         address: "512 PINE, ADA, MI",
+//         balance: 57.75,
+//         credlim: 500,
+//         slsrnumb: 6,
+//     },
+//     {
+//         custnumb: 622,
+//         custname: "DAN MARTIN",
+//         address: "419 CHIP, GRANT, MI",
+//         balance: 575.50,
+//         credlim: 500,
+//         slsrnumb: 3,
+//     },
+// ];
+
+// db.customer.insertMany(data);
+
+db.customer.find({})
