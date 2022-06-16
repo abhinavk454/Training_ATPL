@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+
+function doSquare()
+{
+ x=document.f1.input1.value; 
+ y=x*x;
+ document.f1.output1.value=y;
+}
+
+</script>
+</head>
+<body>
+<form name="f1">
+<input type="number" name="input1" placeholder="Enter the Number" />
+<br/>
+<input type="button" name="b1" value="Click" onClick="doSquare()" />
+<br/>
+<input type="number" name="output1" placeholder="Output"/>
+</form>
+</body>
+</html>
