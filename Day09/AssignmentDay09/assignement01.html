@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 01 (JS Day02)</title>
+    <script>
+      function calSa(radius, pi) {
+        area = radius * radius * pi;
+        return area;
+      }
+      function calCir(radius, pi) {
+        circumference = 2 * radius * pi;
+        return circumference;
+      }
+      function calVol(radius, pi) {
+        volume = (4 / 3) * pi * radius * radius * radius;
+        return volume;
+      }
+      function cF() {
+        radius = document.getElementById("radius").value;
+        // alert(radius);
+        pi = document.getElementById("pi").value;
+        area = calSa(radius, pi);
+        circumference = calCir(radius, pi);
+        volume = calVol(radius, pi);
+        document.getElementById("area").innerHTML = area;
+        document.getElementById("circumference").innerHTML = circumference;
+        document.getElementById("volume").innerHTML = volume;
+      }
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+      }
+      .main {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: brown;
+      }
+      .m1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .m2,
+      .m3,
+      .m4,
+      .m5 {
+        display: flex;
+        padding: 10px;
+        margin: auto 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .middle {
+        background-color: tomato;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .middle * {
+        padding: 10px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+      }
+      #m6 {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: cadetblue;
+        width: 100%;
+      }
+      input[type="button"] {
+        padding: 10px 20px;
+        background-color: slateblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top">
+        <h2>Sphere Calculator</h2>
+      </div>
+      <form action="" name="f1">
+        <div class="middle">
+          <div class="m1">
+            <label for="cal">Choose a Calculation</label>
+            <select name="cal" id="cal" onchange="#">
+              <option value="1">A, V, C | Given r</option>
+              <option value="2"></option>
+              <option value="3"></option>
+            </select>
+          </div>
+          <div class="m2">
+            <label for="r">Radius r = </label>
+            <input type="number" name="r" id="radius" />
+          </div>
+          <div class="m3">
+            <label for="pi">Let pi = </label>
+            <input type="number" name="pi" id="pi" />
+          </div>
+          <div class="m4">
+            <label for="unit">Units </label>
+            <select name="uni" id="uni" onchange="#">
+              <option value="cm">cm</option>
+              <option value="m">m</option>
+            </select>
+          </div>
+          <div class="m5">
+            <label for="sf">Significant Figures </label>
+            <select name="sf" id="sf">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div id="m6">
+            <input type="button" value="Clear" />
+            <input type="button" value="Calculate" onclick="cF()" />
+          </div>
+        </div>
+      </form>
+      <div class="bottom">
+        <div class="b1"><h3>Answer:</h3></div>
+        <form action="" name="f2">
+          <div class="b2">
+            <div class="b3">
+              <h4>Surface Area</h4>
+              <label for="a">A = </label>
+              <div id="area"></div>
+            </div>
+            <div class="b4">
+              <h4>Volume</h4>
+              <label for="v">V = </label>
+              <div id="volume"></div>
+            </div>
+            <div class="b5">
+              <h4>Circumference</h4>
+              <label for="c">C = </label>
+              <div id="circumference"></div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

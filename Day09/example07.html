@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 07(Mouseout and Mouseover events)</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #a1 {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(83, 83, 187);
+        text-align: center;
+      }
+    </style>
+    <script>
+      function x() {
+        // document.getElementById("a1").style.fontSize = "40px";
+        document.getElementById("a1").style.backgroundColor = "#cfcfcf";
+        document.getElementById("a1").style.color = "#cfcfcf";
+      }
+      function y() {
+        document.getElementById("a1").style.backgroundColor = "#cff";
+        document.getElementById("a1").style.color = "#fcf";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>mouseover and mouseout</h1>
+    <div id="a1" onmouseover="x()" onmouseout="y()">This is India.👑👑👑</div>
+  </body>
+</html>

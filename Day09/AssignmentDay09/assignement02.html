@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <title>Assignment 02 (Day02)</title>
+    <script></script>
+    <link rel="stylesheet" href="./assign.css" />
+    <script>
+      function toFahr() {
+        inp_v = document.f1.out1.value;
+        // alert(inp_v);
+        if (inp_v == "") {
+          alert("Please enter a temp in celsius to convert 😎");
+        } else {
+          // C(9/5) + 32
+          temp_f = parseFloat(inp_v) * (9 / 5) + 32;
+          document.f1.out2.value = temp_f;
+        }
+      }
+
+      function toCelc() {
+        inp_v = document.f1.out2.value;
+        // alert(inp_v);
+        if (inp_v == "") {
+          alert("Please enter a temp in f to convert 😎");
+        } else {
+          // [(°F-32)×5]/9
+          temp_f = ((parseFloat(inp_v) - 32) * 5) / 9;
+          document.f1.out1.value = temp_f;
+        }
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+      body {
+        background-color: #d1d963;
+        text-align: center;
+        font-family: "Kdam Thmor Pro", sans-serif;
+        padding: 10px;
+      }
+      .main {
+        width: 800px;
+        padding: 10p;
+        height: 400px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(137, 45, 173);
+        box-shadow: 0 0 20px;
+        border-radius: 10px 15px;
+      }
+      .left {
+        width: 50%;
+        margin-right: 20px;
+      }
+      .tf {
+        background-color: yellow;
+        width: 80%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 0 0 10px;
+        text-shadow: 0 0 10px #4169e1;
+      }
+      .r1,
+      .r2,
+      .r3,
+      .r4 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+      }
+      .r1 *,
+      .r2 *,
+      .r3 *,
+      .r4 * {
+        margin-right: 5px;
+      }
+      input[type="button"] {
+        background-color: #4169e1;
+        color: white;
+        border: none;
+        padding: 10px 45px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+      input[type="button"]:hover {
+        background-color: #2f4f4f;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+      input[type="number"] {
+        text-align: center;
+        width: 45%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+      .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-image: url("./a2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+      }
+      .l1 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #g1 {
+        background-color: slateblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <form action="" name="f1">
+          <h2 class="tf">Temperature Converter</h2>
+          <br />
+          <br />
+          <br />
+          <div class="r1">
+            <label for="c" class="l1">In celsius (.C)</label>
+            <input
+              type="number"
+              name="out1"
+              placeholder="In celsius"
+              onkeyup="toFahr(this)"
+            />
+          </div>
+          <br />
+          <div class="r4">
+            <label for="out">In Fahrenheit (.F)</label>
+            <input
+              type="number"
+              name="out2"
+              placeholder="In Fahrenheit"
+              onkeyup="toCelc(this)"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

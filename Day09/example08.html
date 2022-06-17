@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 08</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      #a1 {
+        width: 100vw;
+        height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      body * {
+        margin: 5px;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      function xa() {
+        col = document.f1.co.value;
+        console.log(col);
+        if (col == "") {
+          alert("Please enter color");
+        }
+        document.getElementById("a1").style.backgroundColor = col;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Color Changer</h1>
+    <div id="a1">
+      <form action="" name="f1">
+        <input type="text" name="co" placeholder="Enter the color value" />
+        <br />
+        <input type="button" value="Change Color" onclick="xa()" />
+      </form>
+    </div>
+  </body>
+</html>
