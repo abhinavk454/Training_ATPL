@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example01</title>
+    <script>
+      function check() {
+        val = document.login.type.selectedIndex;
+        ans_w = "";
+        if (val == 0) {
+          alert("Select Any members below");
+        } else {
+          if (val == 1) {
+            // alert("Freshers is selected.");
+            ans_w = "Freshers";
+          } else if (val == 2) {
+            // alert("Intern is selected.");
+            ans_w = "Intern";
+          } else if (val == 3) {
+            // alert("Experienced is selected");
+            ans_w = "Experienced";
+          } else {
+            // alert("Under_Studying is selected");
+            ans_w = "Under_Studying";
+          }
+          document.getElementById("out").innerHTML = ans_w;
+        }
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: none;
+      }
+      body * {
+        padding: 10px;
+        font-size: 18px;
+      }
+      #out {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="login">
+      <select name="type" id="" class="text1">
+        <option value="Selected" name="sel">Select Type</option>
+        <option name="fr" value="Freshers">Freshers</option>
+        <option name="in" value="Intern">Intern</option>
+        <option name="ep" value="Experienced">Experienced</option>
+        <option value="ex" value="Under_Studying">Under_Studying</option>
+      </select>
+      <h2>Click Now</h2>
+      <input type="button" value="submit" onClick="check()" />
+    </form>
+    <div id="out"></div>
+  </body>
+</html>

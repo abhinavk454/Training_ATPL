@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <script>
+    function validateF() {
+      n = document.f.name.value;
+      a = document.f.age.value;
+      m = document.f.g[0].checked;
+      f = document.f.g[1].checked;
+      r = document.f.h[0].checked;
+      c = document.f.h[1].checked;
+      gen = "";
+      hob = "";
+      if (n == "" && a == "" && m == "" && f == "" && r == "" && c == "") {
+        alert("All is required");
+      } else {
+        if (m == true) {
+          gen = "Male";
+        }
+        if (f == true) {
+          gen = "female";
+        }
+        if (r == true) {
+          hob += " Reading";
+        }
+        if (c == true) {
+          hob += ", Cricket";
+        }
+      }
+      alert(
+        "Validated \n Name: " +
+          n +
+          "\n Age: " +
+          a +
+          "\n Gender: " +
+          gen +
+          "\n Hobbies: " +
+          hob
+      );
+    }
+  </script>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+    form * {
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <form action="#" name="f">
+      <div class="m">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="m">
+        <label for="email">Age:</label>
+        <input type="number" id="age" name="age" />
+      </div>
+      <div class="in">
+        <label for="email">Gender :</label>
+        <input type="radio" name="g" id="g" />Male
+        <input type="radio" name="g" id="g" />Female
+      </div>
+      <div class="f">
+        <!-- hobbies -->
+        <label for="hob">Hobbies</label>
+        <input type="checkbox" name="h" id="" />Reading
+        <input type="checkbox" name="h" id="" />Cricket
+      </div>
+      <input type="button" value="Submit" onClick="validateF()" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example02</title>
+    <script>
+      function upper() {
+        it = document.f.comment.value;
+        document.getElementById("out").innerHTML = it.toUpperCase();
+      }
+      function lower() {
+        it = document.f.comment.value;
+        document.getElementById("out").innerHTML = it.toLowerCase();
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: turquoise;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      form * {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      textarea {
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 500px;
+        height: 100px;
+        background: rgba(10, 144, 110, 0.314);
+        border-color: #ffffff #ffffff;
+        border-image: none;
+        border-radius: 6px 6px 6px 6px;
+        border-style: none solid solid none;
+        border-width: medium 1px 1px medium;
+        box-shadow: rgba(0, 0, 0, 0.12) inset;
+        color: #555555;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.4em;
+        text-align: center;
+        padding: 5px 8px;
+        transition: background-color 0.2s ease 0s;
+      }
+
+      textarea:focus {
+        background: none repeat scroll 0 0 #ffffff;
+        outline-width: 0;
+      }
+      input[type="button"] {
+        background-color: tomato;
+        border: none;
+        border-radius: 6px;
+      }
+      input[type="button"]:hover {
+        background-color: royalblue;
+        transform: scale(1.15);
+        border: none;
+      }
+      h2 {
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Text Case Converter</h2>
+    <form action="" name="f">
+      <textarea
+        placeholder="Enter your text here"
+        rows="20"
+        name="comment"
+        id="comment_text"
+        cols="40"
+        class="ui-autocomplete-input"
+        autocomplete=""
+        role="textbox"
+        aria-autocomplete="list"
+        aria-haspopup="true"
+        onkeyup=""
+      ></textarea>
+      <input type="button" value="Convert To Upper" onClick="upper()" />
+      <input type="button" value="Convert To Lower" onClick="lower()" />
+    </form>
+    <div>
+      <textarea
+        id="out"
+        name="out"
+        id="out"
+        cols="40"
+        rows="20"
+        placeholder="Output"
+      ></textarea>
+    </div>
+  </body>
+</html>

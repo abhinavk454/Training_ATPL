@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 05</title>
+    <script>
+      function checkLen() {
+        len = document.f1.pass1.value;
+        if (len.length < 8) {
+          alert("Please enter password longer than 8 letter.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="f1" action="">
+      <input type="password" name="pass1" id="t1" onblur="checkLen()" />
+      <input type="password" name="pass2" id="t2" onblur="checkLen()" />
+    </form>
+  </body>
+</html>
