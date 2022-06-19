@@ -1,0 +1,14 @@
+{  
+           "_id" : ObjectId("56254d4fdf2222265r4g12ds3d65f"),
+           "name" : "Mick",
+           "Course" : "btech",  
+           "batch_year" : 2018,  
+           "language" : ["c++", "java", "python"],
+           "personal_details" : {  
+                      "Father_name" : "Jonny",  
+                      "phone_no" : 8895321456,  
+                      "age" : 23,  
+                      "gender" : "Male",  
+                      "City" : "NewYork"
+                    }              
+}
