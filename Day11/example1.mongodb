@@ -1,0 +1,53 @@
+use('emp')
+
+// data=[{
+//    title: 'MongoDB Overview', 
+//    description: 'MongoDB is no sql database',
+//    by_user: 'mongodb',
+//    url: 'http://www.mongodb.com',
+//    tags: ['mongodb', 'database', 'NoSQL'],
+//    likes: 100
+// },
+// {
+//    title: 'NoSQL Overview', 
+//    description: 'No sql database is very fast',
+//    by_user: 'mongodb',
+//    url: 'http://www.mongodb.com',
+//    tags: ['mongodb', 'database', 'NoSQL'],
+//    likes: 10
+// },
+// {
+//    title: 'Neo4j Overview', 
+//    description: 'Neo4j is no sql database',
+//    by_user: 'Neo4j',
+//    url: 'http://www.neo4j.com',
+//    tags: ['neo4j', 'database', 'NoSQL'],
+//    likes: 750
+// }]
+
+// db.mongodb.insertMany(data)
+
+// db.mongodb.aggregate([{/**
+//  * _id: The id of the group.
+//  * fieldN: The first field name.
+//  */
+//     $group: {
+//     _id: "$by_user",
+//     num_tutorial: {
+//         $sum: "$likes"
+//       }
+//     }
+// }])
+
+// db.mongodb.aggregate([{
+//     /**
+//      * _id: The id of the group.
+//      * fieldN: The first field name.
+//      */
+//     $group: {
+//       _id: "$by_user",
+//       num_tutorial: {
+//         $avg: "$likes"
+//       }
+//     }
+// }])
