@@ -1,0 +1,32 @@
+use('emp');
+
+// db.stores.insertMany(
+//    [
+//      { _id: 1, name: "Java Hut", description: "Coffee and cakes" },
+//      { _id: 2, name: "Burger Buns", description: "Gourmet hamburgers" },
+//      { _id: 3, name: "Coffee Shop", description: "Just coffee" },
+//      { _id: 4, name: "Clothes Clothes Clothes", description: "Discount clothing" },
+//      { _id: 5, name: "Java Shopping", description: "Indonesian goods" }
+//    ]
+// )
+
+// db.stores.createIndex( { name: "text", description: "text" } )
+
+//find all documents containing "coffe
+//find all documents containing "coffee shop"
+// db.stores.find( { $text: { $search: "\"coffee shop\"" } } )
+
+//find all stores containing "java" or "shop" but not "coffee"
+// db.stores.find( { $text: { $search: "java shop -coffee" } } )
+
+//find all stores containing any terms from the list "coffee", "shop", and "java" in the stores
+// db.stores.find( { $text: { $search: "java coffee shop" } } )
+
+//how to implememnt text search in aggregation
+// db.stores.aggregate(
+//    [
+//      { $match: { $text: { $search: "cake tea" } } },
+//      { $sort: { score: { $meta: "textScore" } } },
+//      { $project: { title: 1, _id: 0 } }
+//    ]
+// )
