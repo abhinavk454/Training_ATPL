@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 01(Day12)</title>
+    <link rel="stylesheet" href="assign1.css" />
+    <script>
+      function showMsd() {
+        document.getElementById("prev").style.visibility = "hidden";
+        document.getElementById("after").style.visibility = "visible";
+      }
+      function hideMsd() {
+        document.getElementById("prev").style.visibility = "visible";
+        document.getElementById("after").style.visibility = "hidden";
+      }
+      function showMsd1() {
+        document.getElementById("prev1").style.visibility = "hidden";
+        document.getElementById("after1").style.visibility = "visible";
+      }
+      function hideMsd1() {
+        document.getElementById("prev1").style.visibility = "visible";
+        document.getElementById("after1").style.visibility = "hidden";
+      }
+      function showMsd2() {
+        document.getElementById("prev2").style.visibility = "hidden";
+        document.getElementById("after2").style.visibility = "visible";
+      }
+      function hideMsd2() {
+        document.getElementById("prev2").style.visibility = "visible";
+        document.getElementById("after2").style.visibility = "hidden";
+      }
+      function showMsd3() {
+        document.getElementById("prev3").style.visibility = "hidden";
+        document.getElementById("after3").style.visibility = "visible";
+      }
+      function hideMsd3() {
+        document.getElementById("prev3").style.visibility = "visible";
+        document.getElementById("after3").style.visibility = "hidden";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Sport Figures</h2>
+    <div class="main">
+      <div class="d1">
+        <div class="c1" onmouseover="showMsd()" onmouseout="hideMsd()">
+          <div id="prev">
+            <img
+              src="https://pixabay.com/get/g792a419327bdbaeb30f89d2a7879d247fe61e6f21e355c9854e67d0672bc23c0fb6f3cd7e0ffad03e1176d8248f68808b73dfabd8e378aca07b33574624a0a70_1280.png"
+              alt=""
+              srcset=""
+              width="70%"
+            />
+          </div>
+          <div id="after">
+            <h2>Mahendra Singh Dhoni</h2>
+            <p>
+              He led the team to three ICC trophies including the 2007 ICC World
+              Twenty20, 2011 ICC Cricket World Cup and 2013 ICC Champions
+              Trophy. Under his captaincy, India won the Asia Cup two times, in
+              2010 and 2011 under his leadership. He is considered as one of the
+              greatest Captains and Wicket Keeper-Batsmen of all time.
+            </p>
+          </div>
+        </div>
+        <div class="c2" onmouseover="showMsd1()" onmouseout="hideMsd1()">
+          <div id="prev1">
+            <img
+              src="https://pixabay.com/get/gc2c4b40c563ade6add5a33f7d54489a84090c4c8da2e88d2a7e60c7208f3d4427cc9568f4735514eae5e6b7836dd9443c296849db591901375141155225a704d_1280.png"
+              alt=""
+              srcset=""
+              width="70%"
+            />
+          </div>
+          <div id="after1">
+            <h2>Virat Kohli</h2>
+            <p>
+              Virat is an Indian international cricketer and former captain of
+              the India national cricket team. He plays for Delhi in domestic
+              cricket and Royal Challengers Bangalore in the Indian Premier
+              League as a right-handed batsman. He is often considered one of
+              the best batsmen of his era and some critics believe him to be one
+              of the best limited-overs batsmen in history.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d2">
+        <div class="c3" onmouseover="showMsd2()" onmouseout="hideMsd2()">
+          <div id="prev2">
+            <img
+              src="https://pixabay.com/get/g4be59ed2d7ec526b46b386e5a4b557c4c4357cf61b071241203e64ef85c6738ea15d6371d4c6d4c83247c4fbb6db6e1968e01caaaab9fcdaedc842794f2ec6a6_1280.png"
+              alt=""
+              srcset=""
+              width="70%"
+            />
+          </div>
+          <div id="after2">
+            <h2>Muhammad Ali</h2>
+            <p>
+              Nicknamed "The Greatest", he is widely regarded as one of the most
+              significant and celebrated sports figures of the 20th century, and
+              is frequently ranked as the greatest heavyweight boxer of all time
+            </p>
+          </div>
+        </div>
+        <div class="c4" onmouseover="showMsd3()" onmouseout="hideMsd3()">
+          <div id="prev3">
+            <img
+              src="https://pixabay.com/get/gb3f902681ba8a0a534ba46a81b80c76dc89e6c6dfd3a88cb58110c7c303038156e3b5cdf16d20e6970f8803d0eedf906fc0369f37e52274753cdf8d45691ebf4_1280.png"
+              alt="ime"
+              srcset=""
+              width="70%"
+            />
+          </div>
+          <div id="after3">
+            <h2>Sachin Tendulkar</h2>
+            <p>
+              He is an Indian former international cricketer who captained the
+              Indian national team. He is regarded as one of the greatest
+              batsmen in the history of cricket
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
