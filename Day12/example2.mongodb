@@ -1,0 +1,60 @@
+use('emp');
+
+db.usersessions.insertMany([
+{ userid: "a", start: ISODate('2020-03-03 14:17:00'), length: 95 },
+{ userid: "b", start: ISODate('2020-03-03 14:23:00'), length: 110 },
+{ userid: "c", start: ISODate('2020-03-03 15:02:00'), length: 120 },
+{ userid: "d", start: ISODate('2020-03-03 16:45:00'), length: 45 },
+{ userid: "a", start: ISODate('2020-03-04 11:05:00'), length: 105 },
+{ userid: "b", start: ISODate('2020-03-04 13:14:00'), length: 120 },
+{ userid: "c", start: ISODate('2020-03-04 17:00:00'), length: 130 },
+{ userid: "d", start: ISODate('2020-03-04 15:37:00'), length: 65 }
+])
+
+// 1.Define the map function that maps the userid to an object that contains
+// the fields total_time, count, and avg_time:
+var mapFunction = function() {
+var key = this.userid;
+var value = { total_time: this.length, count: 1, avg_time: 0 };
+emit( key, value );
+};
+
+// 2.Define the corresponding reduce function
+// with two arguments key and values to calculate the total time and the count. The key corresponds to the userid,
+// and the values is an array whose elements corresponds to the individual objects mapped to the userid in the mapFunction
+var reduceFunction = function(key, values) {
+
+var reducedObject = { total_time: 0, count:0, avg_time:0 };
+
+values.forEach(function(value) {
+reducedObject.total_time += value.total_time;
+reducedObject.count += value.count;
+});
+
+return reducedObject;
+};
+
+// 3.Define the finalize function with two arguments key and reducedValue. The function modifies the reducedValue
+// document to add another field average and returns the modified document
+var finalizeFunction = function(key, reducedValue) {
+
+if (reducedValue.count > 0)
+reducedValue.avg_time = reducedValue.total_time / reducedValue.count;
+
+return reducedValue;
+};
+
+// 4.Perform map-reduce on the usersessions collection using the mapFunction, the reduceFunction, and the finalizeFunction functions. Output the results to a collection session_stats.
+// If the session_stats collection already exists, the operation will replace the contents:
+
+db.usersessions.mapReduce(
+mapFunction,
+reduceFunction,
+{
+out: "session_stats",
+finalize: finalizeFunction
+}
+)
+
+// 5.Query the session_stats collection to verify the results:
+db.session_stats.find().sort( { _id: 1 } )
