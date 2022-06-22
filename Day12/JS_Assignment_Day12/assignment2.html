@@ -10,18 +10,20 @@
       function validateName() {
         name = document.getElementById("name").value;
         if (name == "") {
-          alert("Name is required");
+          document.getElementById("err").innerHTML = "Name is required";
         } else if (name.length < 3) {
-          alert("Name must be at least 3 characters");
+          document.getElementById("err").innerHTML =
+            "Name must be at least 3 characters";
         } else {
-          alert("Name is valid");
+          document.getElementById("err").innerHTML = "Name is validated";
+          document.getElementById("err").style.color = "green";
         }
       }
 
       function validateEmail() {
         email = document.getElementById("email").value;
         if (email == "") {
-          alert("Email is required");
+          document.getElementById("err1").innerHTML = "Email is required";
         } else {
           at_pos = email.indexOf("@");
           dot_pos = email.lastIndexOf(".");
@@ -30,7 +32,9 @@
             dot_pos < at_pos + 2 ||
             dot_pos + 2 >= email.length
           ) {
-            alert("Not a valid e-mail address");
+            document.getElementById("err1").innerHTML =
+              "Not a valid e-mail address";
+            document.getElementById("err1").style.color = "red";
           }
         }
       }
@@ -38,46 +42,54 @@
       function validatePhone() {
         phone = document.getElementById("phone").value;
         if (phone == "") {
-          alert("Phone is required");
+          document.getElementById("err5").innerHTML = "Phone is required";
         } else if (phone.length < 10 && /^\d*$/.test(phone) == false) {
-          alert("Phone must be at least 10 digits and should be digit");
+          document.getElementById("err5").innerHTML =
+            "Phone must be at least 10 digits and should be digit";
         } else {
-          alert("Phone is valid");
+          document.getElementById("err5").innerHTML = "Phone is valid";
+          document.getElementById("err5").style.color = "green";
         }
       }
 
       function validateMessage() {
         message = document.getElementById("message").value;
         if (message == "") {
-          alert("Message is required");
+          document.getElementById("err6").innerHTML = "Message is required";
         } else if (message.length < 10) {
-          alert("Message must be at least 10 characters");
+          document.getElementById("err6").innerHTML =
+            "Message must be at least 10 characters";
         } else if (message.length > 100) {
-          alert("Message must be less than 100 characters");
+          document.getElementById("err6").innerHTML =
+            "Message must be less than 100 characters";
         } else {
-          setTimeout(alert("Message is valid"), 200);
+          document.getElementById("err6").innerHTML = "Message is valid";
+          document.getElementById("err6").style.color = "green";
         }
       }
 
       function validateRoll() {
         roll = document.getElementById("roll").value;
         if (roll == "") {
-          alert("Roll is required");
+          document.getElementById("err2").innerHTML = "Roll is required";
         } else if (/^[0-9]+$/.test(roll) == false) {
-          alert("Roll should be digit");
+          document.getElementById("err2").innerHTML = "Roll should be digit";
         } else {
-          alert("Roll is valid");
+          document.getElementById("err2").innerHTML = "Roll is valid";
+          document.getElementById("err2").style.color = "green";
         }
       }
 
       function validatePass() {
         pass = document.getElementById("pass").value;
         if (pass == "") {
-          alert("Password is required");
+          document.getElementById("err3").innerHTML = "Password is required";
         } else if (pass.length < 8) {
-          alert("Password must be at least 8 characters");
+          document.getElementById("err3").innerHTML =
+            "Password must be at least 8 characters";
         } else {
-          alert("Password is valid");
+          document.getElementById("err3").innerHTML = "Password is valid";
+          document.getElementById("err3").style.color = "green";
         }
       }
 
@@ -85,9 +97,10 @@
         pass = document.getElementById("pass").value;
         confirm = document.getElementById("pass1").value;
         if (pass != confirm) {
-          alert("Password does not match");
+          document.getElementById("err4").innerHTML = "Password does not match";
         } else {
-          alert("Password matches");
+          document.getElementById("err4").innerHTML = "Password matches";
+          document.getElementById("err4").style.color = "green";
         }
       }
 
@@ -106,16 +119,28 @@
     <form action="#" method="post">
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" onblur="validateName()" />
+      <div id="err"></div>
+
       <label for="email">Email:</label>
-      <input type="email" name="email" id="email" />
+      <input type="email" name="email" id="email" onblur="validateEmail()" />
+      <div id="err1"></div>
+
       <label for="roll">Roll No:</label>
-      <input type="text" id="roll" />
+      <input type="text" id="roll" onblur="validateRoll()" />
+      <div id="err2"></div>
+
       <label for="pass">Password:</label>
-      <input type="password" name="" id="pa" onblur="validatePass()" />
+      <input type="password" name="" id="pass" onblur="validatePass()" />
+      <div id="err3"></div>
+
       <label for="pass1">Confirm Password:</label>
-      <input type="password" name="cp" id="p2" onblur="confirmPass()" />
+      <input type="password" name="cp" id="pass1" onblur="confirmPass()" />
+      <div id="err4"></div>
+
       <label for="phone">Phone:</label>
-      <input type="tel" name="phone" id="phone" />
+      <input type="tel" name="phone" id="phone" onblur="validatePhone()" />
+      <div id="err5"></div>
+
       <label for="message">Message:</label>
       <textarea
         name="message"
@@ -124,6 +149,8 @@
         rows="10"
         onblur="validateMessage()"
       ></textarea>
+      <div id="err6"></div>
+
       <input type="button" value="Submit" onclick="validateForm()" />
     </form>
   </body>
