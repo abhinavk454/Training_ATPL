@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 01</title>
+    <link rel="stylesheet" href="./Assignment1.css" />
+    <script src="../jquery-3.6.0.js"></script>
+    <!-- <script src="./Assignment1.js"></script> -->
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("ol").append("<li>" + $("#text").val() + "</li>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h4>Enter the text to list below:</h4>
+    <input type="text" id="text" />
+    <button id="btn">ADD</button>
+    <ol>
+      <li>Text Added</li>
+    </ol>
+  </body>
+</html>
