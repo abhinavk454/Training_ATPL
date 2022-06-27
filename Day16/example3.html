@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Example</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //   $("#card").flip();
+        $("#card").flip({
+          axis: "x",
+          trigger: "hover",
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="./example3.css" />
+  </head>
+  <body>
+    <div id="card">
+      <div class="front">
+        <div class="front-content">
+          <h1>Front</h1>
+          <p>This is the front of the card.</p>
+        </div>
+      </div>
+      <div class="back">
+        <p>
+          lion, (Panthera leo), large, powerfully built cat (family Felidae)
+          that is second in size only to the tiger. The proverbial “king of
+          beasts,” the lion has been one of the best-known wild animals since
+          earliest times. Lions are most active at night and live in a variety
+          of habitats but prefer grassland, savanna, dense scrub, and open
+          woodland. Historically, they ranged across much of Europe, Asia, and
+          Africa, but now they are found mainly in parts of Africa south of the
+          Sahara. An isolated population of about 650 Asiatic lions constitute a
+          slightly smaller race that lives under strict protection in India’s
+          Gir National Park and Wildlife Sanctuary.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

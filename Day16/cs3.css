@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+  text-align: center;
+}
+.upper {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: tomato;
+}
+.lower {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: teal;
+}
+#button {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.message,
+.email,
+.phone,
+.name {
+  width: 90%;
+  display: flex;
+  margin: 10px;
+}
+
+#name,
+#email,
+#phone,
+#ms {
+  margin-left: 20px;
+  /* width: 50%; */
+  display: flex;
+  padding: 10px;
+  border: none;
+  /* border-bottom: 2px solid gray; */
+  /* border-radius: 14px; */
+  background-color: teal;
+  border-bottom: 1px solid red;
+}
+
+textarea {
+  width: 90%;
+  display: flex;
+  margin: 10px;
+  border: none;
+  /* border-bottom: 2px; */
+  /* border-radius: 14px; */
+  background-color: teal;
+  border-bottom: 1px solid red;
+}

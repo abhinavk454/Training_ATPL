@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.front {
+  width: 800px;
+  height: 400px;
+  background-image: url("./lion.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+  padding: 20px;
+}
+.back {
+  width: 800px;
+  height: 800px;
+  margin: 20px;
+  padding: 20px;
+  background-color: burlywood;
+}
