@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 03</title>
+    <script>
+      function v1() {
+        document.getElementById("m1").style.fontSize = "40px";
+        setTimeout(v2, 200);
+      }
+      function v2() {
+        document.getElementById("m1").style.fontSize = "20px";
+        setTimeout(v1, 200);
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: chocolate;
+      }
+      body * {
+        margin: 10px;
+        padding: 10px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="m1"><h1>Click The button to auto toggle font size</h1></div>
+    <input type="button" value="Toggle" onclick="v1()" />
+  </body>
+</html>

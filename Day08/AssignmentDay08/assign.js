@@ -4,7 +4,7 @@ function toKelvin() {
   inp_v = document.f1.c.value;
   // alert(inp_v);
   if (inp_v == "") {
-    alert("Please enter a temp in celcius to convert 😎");
+    alert("Please enter a temp in celsius to convert 😎");
   } else {
     temp_k = parseFloat(inp_v) + parseFloat("273.15");
     document.f1.out.value = temp_k;
@@ -14,7 +14,7 @@ function toFahr() {
   inp_v = document.f1.c.value;
   // alert(inp_v);
   if (inp_v == "") {
-    alert("Please enter a temp in celcius to convert 😎");
+    alert("Please enter a temp in celsius to convert 😎");
   } else {
     // C(9/5) + 32
     temp_f = parseFloat(inp_v) * (9 / 5) + 32;
