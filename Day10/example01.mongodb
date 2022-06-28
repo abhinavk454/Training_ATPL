@@ -1,0 +1,63 @@
+use('emp');
+
+data=[
+  {
+    "std_name": "Jack",
+    "sex": "Male",
+    "class": "VI",
+    "age": 11,
+    "grd_point": 33
+  },
+  {
+    "std_name": "Jenny",
+    "sex": "Female",
+    "class": "VI",
+    "age": 13,
+    "grd_point": 30
+  },
+  {
+    "std_name": "Thomas",
+    "sex": "Male",
+    "class": "V",
+    "age": 11,
+    "grd_point": 35.1257
+  },
+  {
+    "std_name": "Lassy",
+    "sex": "Female",
+    "class": "X",
+    "age": 17,
+    "grd_point": 36.2514
+  },
+  {
+    "std_name": "Mia",
+    "sex": "Female",
+    "class": "X",
+    "age": 19,
+    "grd_point": 35.5201
+  },
+  {
+    "std_name": "Mike",
+    "sex": "Male",
+    "class": "V",
+    "age": 16,
+    "grd_point": 35.5201
+  }
+]
+
+// inserting tha data
+// db.students.insertMany(data);
+
+// gender:male and class should be VI
+// db.students.find({$and:[{"sex":"Female"},{"class":"VI"}]}).pretty();
+
+// retrieving the data of students whose "grd_pointt" is at least 35.
+// db.students.find({'grd_point':{$not:{$lt:35}}}).pretty()
+
+// retrieving data of students whose "age" is not greater than 12.
+// db.students.find({'age':{$not:{$gt:12}}}).pretty()
+
+// retrieving data of students whose "age" is not equal to 11.
+db.students.find({'age':{$not:{$eq:11}}}).pretty()
+
+// db.students.find({})
