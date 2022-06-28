@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="assign2.css" />
+    <script>
+      function validateName() {
+        name = document.getElementById("name").value;
+        if (name == "") {
+          document.getElementById("err").innerHTML = "Name is required";
+        } else if (name.length < 3) {
+          document.getElementById("err").innerHTML =
+            "Name must be at least 3 characters";
+        } else {
+          document.getElementById("err").innerHTML = "Name is validated";
+          document.getElementById("err").style.color = "green";
+        }
+      }
+
+      function validateEmail() {
+        email = document.getElementById("email").value;
+        if (email == "") {
+          document.getElementById("err1").innerHTML = "Email is required";
+        } else {
+          at_pos = email.indexOf("@");
+          dot_pos = email.lastIndexOf(".");
+          if (
+            at_pos < 1 ||
+            dot_pos < at_pos + 2 ||
+            dot_pos + 2 >= email.length
+          ) {
+            document.getElementById("err1").innerHTML =
+              "Not a valid e-mail address";
+            document.getElementById("err1").style.color = "red";
+          }
+        }
+      }
+
+      function validatePhone() {
+        phone = document.getElementById("phone").value;
+        if (phone == "") {
+          document.getElementById("err5").innerHTML = "Phone is required";
+        } else if (phone.length < 10 && /^\d*$/.test(phone) == false) {
+          document.getElementById("err5").innerHTML =
+            "Phone must be at least 10 digits and should be digit";
+        } else {
+          document.getElementById("err5").innerHTML = "Phone is valid";
+          document.getElementById("err5").style.color = "green";
+        }
+      }
+
+      function validateMessage() {
+        message = document.getElementById("message").value;
+        if (message == "") {
+          document.getElementById("err6").innerHTML = "Message is required";
+        } else if (message.length < 10) {
+          document.getElementById("err6").innerHTML =
+            "Message must be at least 10 characters";
+        } else if (message.length > 100) {
+          document.getElementById("err6").innerHTML =
+            "Message must be less than 100 characters";
+        } else {
+          document.getElementById("err6").innerHTML = "Message is valid";
+          document.getElementById("err6").style.color = "green";
+        }
+      }
+
+      function validateRoll() {
+        roll = document.getElementById("roll").value;
+        if (roll == "") {
+          document.getElementById("err2").innerHTML = "Roll is required";
+        } else if (/^[0-9]+$/.test(roll) == false) {
+          document.getElementById("err2").innerHTML = "Roll should be digit";
+        } else {
+          document.getElementById("err2").innerHTML = "Roll is valid";
+          document.getElementById("err2").style.color = "green";
+        }
+      }
+
+      function validatePass() {
+        pass = document.getElementById("pass").value;
+        if (pass == "") {
+          document.getElementById("err3").innerHTML = "Password is required";
+        } else if (pass.length < 8) {
+          document.getElementById("err3").innerHTML =
+            "Password must be at least 8 characters";
+        } else {
+          document.getElementById("err3").innerHTML = "Password is valid";
+          document.getElementById("err3").style.color = "green";
+        }
+      }
+
+      function confirmPass() {
+        pass = document.getElementById("pass").value;
+        confirm = document.getElementById("pass1").value;
+        if (pass != confirm) {
+          document.getElementById("err4").innerHTML = "Password does not match";
+        } else {
+          document.getElementById("err4").innerHTML = "Password matches";
+          document.getElementById("err4").style.color = "green";
+        }
+      }
+
+      //will be used to validate the form
+      function validateForm() {
+        validateName();
+        validateEmail();
+        validatePhone();
+        validateMessage();
+        validateRoll();
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Form Validation</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" onblur="validateName()" />
+      <div id="err"></div>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" onblur="validateEmail()" />
+      <div id="err1"></div>
+
+      <label for="roll">Roll No:</label>
+      <input type="text" id="roll" onblur="validateRoll()" />
+      <div id="err2"></div>
+
+      <label for="pass">Password:</label>
+      <input type="password" name="" id="pass" onblur="validatePass()" />
+      <div id="err3"></div>
+
+      <label for="pass1">Confirm Password:</label>
+      <input type="password" name="cp" id="pass1" onblur="confirmPass()" />
+      <div id="err4"></div>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone" onblur="validatePhone()" />
+      <div id="err5"></div>
+
+      <label for="message">Message:</label>
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        onblur="validateMessage()"
+      ></textarea>
+      <div id="err6"></div>
+
+      <input type="button" value="Submit" onclick="validateForm()" />
+    </form>
+  </body>
+</html>
