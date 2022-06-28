@@ -1,0 +1,55 @@
+use('emp')
+
+// Write and run the following queries:
+
+// The movies titled "Gladiator".
+// db.movies.find({title: "Gladiator"}).pretty()
+
+// The distinct genre values of movies.
+// db.movies.distinct("genre")
+
+// The movies of "crime" or "drama" genre.
+// db.movies.find({genre: {$in:["crime","drama"]}},{title:1,genre:1,_id:0}).pretty()
+
+// The list of movies directed by "Hitchcock",display only title and year and sort them by year.
+// db.movies.find({"director.last_name": {$in:["Hitchcock"]}},{title:1,year:1,_id:0}).sort({year:1}).pretty()
+
+// The list of movies where "Cotillard" played.
+// db.movies.find({"actors.last_name": {$in:["Cotillard"]}},{title:1,_id:0}).pretty()
+
+// The movies released between 1967 and 1995.
+// db.movies.find({year: {$gt:1967,$lt:1995}},{title:1,_id:0}).pretty()
+
+// The list of the movies released between 1967 and 1995, by displaying only title, year, director’s last name sorted by year.
+// db.movies.find({year: {$gt:1967,$lt:1995}},{title:1,_id:0,year:1,"director.last_name":1}).sort({year:1})
+
+// The number of movies by country.
+// db.movies.aggregate({
+//     /**
+//      * _id: The id of the group.
+//      * fieldN: The first field name.
+//      */
+//     $group: {
+//       _id: "$country",
+//       num_of_movies: {
+//         $sum: 1
+//       }
+//     }
+// })
+
+// The number of movies by country and actor.
+db.movies.aggregate({
+    /**
+     * _id: The id of the group.
+     * fieldN: The first field name.
+     */
+    $group: {
+        _id: {
+            country: "$country",
+            actor: "$actors.last_name"
+        },
+        num_of_movies: {
+            $sum: 1
+        }
+    }
+})
