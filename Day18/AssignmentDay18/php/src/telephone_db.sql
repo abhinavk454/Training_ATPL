@@ -2,9 +2,9 @@ create table telephone(
     tno VARCHAR(20) not null primary key,
     fullname VARCHAR(20) not null,
     address VARCHAR(20) not null,
-    state varhar(20) not null,
+    state varchar(20) not null,
     pin VARCHAR(20) not null,
-    deposit float not null,
+    deposit float not null
 );
 insert into telephone
 values (

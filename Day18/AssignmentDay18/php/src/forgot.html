@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./insert.css" />
+  </head>
+  <body>
+    <h1>Forgot Password</h1>
+    <form action="./forgot.php" method="POST">
+      <label for="username">Username: </label>
+      <input type="text" name="username" id="username" />
+      <label for="secq">Select Security Question: </label>
+      <select name="security_question" id="sq">
+        <option value="what is your favorite color?">
+          what is your favorite color?
+        </option>
+        <option value="what is your favorite food?">
+          what is your favorite food?
+        </option>
+        <option value="what is your favorite animal?">
+          what is your favorite game?
+        </option>
+      </select>
+      <label for="ans">Answer: </label>
+      <input type="text" name="answer" id="ans" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
