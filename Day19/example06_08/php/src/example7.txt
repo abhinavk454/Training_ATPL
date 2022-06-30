@@ -1,0 +1,5 @@
+[
+{"display" : "Book a flight", "url" : "https://www.spicejet.com/"},
+{"display" : "Go to Social Site", "url" : "https://www.facebook.com/"},
+{"display" : "Order food now", "url" : "https://www.zomato.com/kingman-ks"}
+]

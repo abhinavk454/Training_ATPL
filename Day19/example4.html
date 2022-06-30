@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #menu {
+      padding-top: 10px;
+      height: 60px;
+      width: 200px;
+      color: white;
+      background: #36454f;
+      font-size: 30px;
+      text-align: center;
+    }
+    #mydata {
+      padding-top: 30px;
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+    a:hover {
+      color: cyan;
+    }
+  </style>
+  <body>
+    <div id="menu">Brand</div>
+    <div id="mydata"></div>
+    <script>
+      myFunction([
+        {
+          display: "Book a Flight",
+          url: "e:/json/check.html",
+        },
+        {
+          display: "Go to social site",
+          url: "https://www.facebook.com/",
+        },
+        {
+          display: "Order food now",
+          url: "https://www.zomato.com/kingman-ks",
+        },
+      ]);
+
+      function myFunction(arr) {
+        var out = "";
+        var i;
+        out += "<ul>";
+        for (i = 0; i < arr.length; i++) {
+          out +=
+            '<li> <a href="' +
+            arr[i].url +
+            '">' +
+            arr[i].display +
+            "</a></li><br>";
+        }
+        out += "</ ul>";
+        var x = document.getElementById("mydata");
+        x.innerHTML = out;
+      }
+    </script>
+  </body>
+</html>
