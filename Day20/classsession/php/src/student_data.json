@@ -1,0 +1,5 @@
+[
+  { "name": "Anurag", "gender": "Male", "subject": "PHP & MySQL" },
+  { "name": "Abhinav", "gender": "Male", "subject": "HTML & CSS" },
+  { "name": "Riya", "gender": "Female", "subject": "Oracle" }
+]
