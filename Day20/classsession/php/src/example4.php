@@ -17,8 +17,6 @@
 
     $array = json_decode($data, true);
 
-    echo $array;
-
     //extract row
 
     foreach ($array as $row) {
