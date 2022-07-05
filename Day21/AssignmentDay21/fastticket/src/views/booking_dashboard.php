@@ -21,8 +21,8 @@ $username = $_SESSION['username'];
     </div>
     <div class="nav">
         <h4>Welcome : <?php echo $username ?></h4>
+        <a href="../helpers/search_pnr.php">Search by PNR</a>
         <a href="../helpers/logout.php">Logout</a>
-
     </div>
     <div class="flex-container">
         <div class="content-container">
