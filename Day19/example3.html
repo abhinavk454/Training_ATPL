@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change value of json data</title>
+  </head>
+  <body>
+    <!-- Change value of json date-->
+    <p id="demo"></p>
+    <p id="demo2"></p>
+  </body>
+  <script>
+    var name1 = { name: "Jack", age: 30, city: "London" };
+    document.getElementById("demo").innerHTML = JSON.stringify(name1);
+    var y = JSON.stringify(name1, function (key, value) {
+      if (key == "name") {
+        return value.toUpperCase();
+      } else if (key == "age") {
+        return value + 10;
+      } else {
+        return value;
+      }
+    });
+    document.getElementById("demo2").innerHTML = y;
+  </script>
+</html>

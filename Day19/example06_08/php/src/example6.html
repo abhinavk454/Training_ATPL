@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="demo">
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+      function loadDoc() {
+        var x_http = new XMLHttpRequest();
+        x_http.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        x_http.open("GET", "./example6.txt", true);
+        x_http.send();
+      }
+    </script>
+  </body>
+</html>
