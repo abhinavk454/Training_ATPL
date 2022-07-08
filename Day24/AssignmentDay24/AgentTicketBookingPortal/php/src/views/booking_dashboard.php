@@ -20,15 +20,20 @@ $username = $_SESSION['username'];
         <h1>Ticket Booking Dashboard</h1>
     </div>
     <div class="nav">
-        <h4>Welcome : <?php echo $username ?></h4>
-        <a href="../helpers/search_pnr.php">Search by PNR</a>
-        <a href="../helpers/logout.php">Logout</a>
+        <div class="ty">
+            <h2>Welcome : <?php echo $username ?></h2>
+        </div>
+        <div class="tz">
+            <a href="../helpers/view_all.php">View All</a>
+            <a href="../helpers/search_pnr.php">Search by PNR</a>
+            <a href="../helpers/logout.php">Logout</a>
+        </div>
     </div>
     <div class="flex-container">
         <div class="content-container">
             <div class="form-container">
                 <form action="../helpers/booking.php" method="POST">
-                    <h1>Book Tickets</h1>
+                    <h2>Book Tickets</h2>
                     <br>
                     <br>
                     <span class="subtitle">NAME:</span>

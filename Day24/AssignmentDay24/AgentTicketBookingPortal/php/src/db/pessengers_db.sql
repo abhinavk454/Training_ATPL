@@ -9,7 +9,7 @@ CREATE TABLE pessangers(
     destination_id INT NOT NULL,
     cost INT DEFAULT 0,
     FOREIGN KEY(source_id) REFERENCES stations(id),
-    FOREIGN KEY(destination_id) REFERENCES stations(id),
+    FOREIGN KEY(destination_id) REFERENCES stations(id)
 );
 INSERT INTO pessangers(
         name,

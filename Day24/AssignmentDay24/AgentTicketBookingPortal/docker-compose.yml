@@ -3,12 +3,12 @@ services:
   php-apache-environment:
     container_name: php-apache
     build:
-      context: ./fastticket
+      context: ./php
       dockerfile: Dockerfile
     depends_on:
       - db
     volumes:
-      - ./fastticket/src:/var/www/html/
+      - ./php/src:/var/www/html/
     ports:
       - 8000:80
   db:

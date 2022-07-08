@@ -1,6 +1,6 @@
-create table agents(
-    username varchar(100) primary key,
-    password varchar(100) not null,
+CREATE TABLE agents(
+    username VARCHAR(100) PRIMARY KEY,
+    PASSWORD VARCHAR(100) NOT NULL
 );
-insert into agents(username, password)
-values('admin', 'admin');
+INSERT INTO agents(username, PASSWORD)
+VALUES('admin', 'admin');

@@ -59,9 +59,13 @@ $username = $_SESSION['username'];
 
 <body>
     <div class="nav">
-        <h4>Welcome : <?php echo $username ?></h4>
-        <a href="../helpers/search_pnr.php">Search by PNR</a>
-        <a href="../helpers/logout.php">Logout</a>
+        <div class="ty">
+            <h2>Welcome : <?php echo $username ?></h2>
+        </div>
+        <div class="tz">
+            <a href="../helpers/search_pnr.php">Search by PNR</a>
+            <a href="../helpers/logout.php">Logout</a>
+        </div>
     </div>
     <div class="flex-container">
         <div class="content-container">

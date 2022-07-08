@@ -5,7 +5,7 @@ include('./configs/db.php');
 $username = $_GET['username'];
 $password = $_GET['password'];
 
-$sql = "SELECT * FROM agents WHERE username='$username' AND password='$password'";
+$sql = "SELECT * FROM agents WHERE username='$username' AND PASSWORD='$password'";
 $result = $conn->query($sql);
 
 if ($result) {
