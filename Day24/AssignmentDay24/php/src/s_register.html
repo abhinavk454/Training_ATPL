@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="./student.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="container-header">
+    <div class="main">
+      <div class="left">
         <h1>Student SignUp</h1>
       </div>
-      <form action="./s_register.php" method="post">
-        <input type="text" name="reg" placeholder="Reg No" />
-        <input type="text" name="fullname" placeholder="Full Name" />
-        <input type="password" name="pass" placeholder="Password" />
-        <input type="number" name="marks" id="" placeholder="Marks" />
-        <input type="submit" value="Sign Up" id="submit" />
-        <h4><a href="./student.html">Sign In</a></h4>
-      </form>
+      <div class="right">
+        <form action="./s_register.php" method="post">
+          <input type="text" name="reg" placeholder="Reg No" />
+          <input type="text" name="fullname" placeholder="Full Name" />
+          <input type="password" name="pass" placeholder="Password" />
+          <input type="number" name="marks" id="" placeholder="Marks" />
+          <input type="submit" value="Sign Up" id="submit" />
+          <h4>
+            <a href="./student.html">Sign In</a><span> </span
+            ><a href="./admin.html">Admin</a>
+          </h4>
+        </form>
+      </div>
     </div>
   </body>
 </html>

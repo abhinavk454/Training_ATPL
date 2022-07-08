@@ -1,8 +1,8 @@
-create table feedback(
-    name varchar(20) not null,
-    email varchar(20) not null,
-    tel varchar(20) not null,
-    date date not null,
-    remarks varchar(500) not null,
-    primary key(name, date)
+CREATE TABLE feedback(
+    NAME VARCHAR(20) NOT NULL,
+    email VARCHAR(20) NOT NULL,
+    tel VARCHAR(20) NOT NULL,
+    DATE DATE NOT NULL,
+    remarks VARCHAR(500) NOT NULL,
+    PRIMARY KEY(NAME, DATE)
 );

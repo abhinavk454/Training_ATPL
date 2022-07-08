@@ -29,52 +29,7 @@ if ($result = $conn->query($sql)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-        }
-
-        .container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            padding: 20px;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            background-color: #32a852;
-        }
-
-        body {
-            background: #32a852;
-            font-family: "Roboto", sans-serif;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            align-items: center;
-            text-align: center;
-            background: #f1f1f1;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -83,6 +38,7 @@ if ($result = $conn->query($sql)) {
                     echo $name ?>
         </h2>
         <div class="right">
+            <a href="./s_search.php">Search Student</a>
             <a href="./s_register.html">Add Students</a>
             <a href="./view_feedbacks.php">View feedbacks</a>
             <a href="./a_logout.php">Log Out</a>
