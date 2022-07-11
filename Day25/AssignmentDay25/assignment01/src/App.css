@@ -1,0 +1,30 @@
+.main {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 26px;
+}
+input {
+  font-family: "Amatic SC", cursive;
+  padding: 10px 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.main * {
+  margin-bottom: 10px;
+}
+
+input:hover {
+  transform: scale(1.1);
+}
