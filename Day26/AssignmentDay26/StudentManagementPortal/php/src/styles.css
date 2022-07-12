@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 130px;
+  background-color: cornflowerblue;
+  font-size: 18px;
+  color: white;
+  border: none;
+}
+
+input {
+  height: 30px;
+  width: 195px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  background-color: #f1f1f15d;
+  border: none;
+}
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 20px;
+  background-color: #f1f1f13d;
+  border: 1px solid rgba(204, 204, 204, 0.327);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: cornflowerblue;
+}
+
+body {
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Dancing Script", cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background: #f1f1f1;
+}
+
+input,
+a,
+* {
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+select {
+  margin-top: 20px;
+}
