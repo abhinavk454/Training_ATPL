@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      #97564d79,
+      rgba(40, 180, 131, 0.417)
+    ),
+    url(../background.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+}
+
+.content {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icons {
+  background-image: url("../logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 100%;
+  padding: 10px;
+}
+
+.anchors {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #97564d;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 45px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+p {
+  margin-bottom: 25px;
+  color: white;
+}
+
+button {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: none;
+  background-color: #5ab534;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
