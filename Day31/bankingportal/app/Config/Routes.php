@@ -45,6 +45,8 @@ $routes->get('/add-customer', 'Home::add_customer');
 $routes->post('/add-customer', 'Home::add_customer_action');
 $routes->get('/view-customer', 'Home::view_customer');
 $routes->post('/view-customer', 'Home::view_customer');
+$routes->get('/view-loan', 'Home::view_loan');
+$routes->post('/view-loan', 'Home::view_loan');
 $routes->get('/user-login', 'Home::user_login');
 $routes->post('/user-login-actions', 'Home::user_login_actions');
 $routes->get('/user-dashboard', 'Home::user_dashboard');

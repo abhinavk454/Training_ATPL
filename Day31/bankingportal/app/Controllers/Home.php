@@ -143,7 +143,7 @@ class Home extends BaseController
         return redirect()->to('/user-login');
     }
 
-    public function view_loans()
+    public function view_loan()
     {
         $loanModel = new \App\Models\loanModel();
         $loans = $loanModel->findAll();

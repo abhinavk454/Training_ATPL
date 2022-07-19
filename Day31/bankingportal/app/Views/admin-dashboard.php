@@ -90,7 +90,7 @@
             <a href="<?= site_url('/view-customer') ?>" class="la">Customers </a>
             <a href="<?= site_url('/add-customer') ?>" class="la">Account </a>
             <a href="<?= site_url('/email') ?>" class="la">Email </a>
-            <a href="<?= site_url("#") ?>" class="la">Loan </a>
+            <a href="<?= site_url('/view-loan') ?>" class="la">Loan </a>
             <button><a href="<?= site_url('/logout') ?>">Logout</a></button>
         </div>
     </div>
