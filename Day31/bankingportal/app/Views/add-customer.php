@@ -127,8 +127,9 @@
             ?>
         </div>
         <div class="anchors">
-            <a href="#" class="la">Profile </a>
+            <a href="<?= site_url('/dashboard') ?>" class="la">Profile </a>
             <a href="<?= site_url('/view-customer') ?>" class="la">Customers </a>
+            <a href="<?= site_url('/email') ?>" class="la">Email </a>
             <a href="<?= site_url('/add-customer') ?>" class="la">Account </a>
             <a href="#" class="la">Loan </a>
             <button><a href="<?= site_url('/logout') ?>">Logout</a></button>

@@ -42,10 +42,6 @@
             color: black;
         }
 
-        .cus_t {
-            display: flex;
-        }
-
         a {
             text-decoration: none;
             text-transform: uppercase;
@@ -74,9 +70,44 @@
             height: 90%;
         }
 
-        th,
-        td {
-            padding: 2px;
+        form {
+            width: 500px;
+            height: 500px;
+            background-color: #fda085;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        input,
+        select {
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #f6d365;
+            border: none;
+            border-radius: 5px;
+        }
+
+        option {
+            padding: 10px 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            border: none;
+            background-color: #f6d365;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -104,35 +135,46 @@
         </div>
     </div>
     <div class="container">
-        <?php
-        if (isset($customers)) {
-            echo "<table border='1' cellspacing='0' cellpadding='3'  >";
-            echo "<tr>";
-            echo "<th>Name</th>";
-            echo "<th>Email</th>";
-            echo "<th>Account Number</th>";
-            echo "<th>Balance</th>";
-            echo "<th>Password</th>";
-            // echo "<th>Action</th>";
-            echo "</tr>";
-            foreach ($customers as $customer) {
-                echo "<tr>";
-                echo "<td>" . $customer['name'] . "</td>";
-                echo "<td>" . $customer['email'] . "</td>";
-                echo "<td>" . $customer['account_number'] . "</td>";
-                echo "<td>" . $customer['balance'] . "</td>";
-                echo "<td>" . $customer['password'] . "</td>";
-                // echo "<td><a href='" . site_url('/edit-customer/' . $customer['user_id']) . "'>Edit</a> | <a href='" . site_url('/delete-customer/' . $customer['user_id']) . "'>Delete</a></td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "<h2>No Customers Found</h2>";
-        }
-        ?>
-    </div>
-    <div class="footer">
-    </div>
+        <?php $validation =  \Config\Services::validation(); ?>
+
+        <div>
+            <div>
+                <form action="<?= base_url('email') ?>" method="POST">
+                    <h3>Send Email To Customers</h3>
+                    <?= csrf_field() ?>
+
+                    <?= (session()->getFlashdata('message')) ?
+                        '<div>'
+                        . session()->getFlashdata('message') .
+                        '</div>' : '' ?>
+
+
+                    <div>
+                        <div>
+                            <select name="email" id="">
+                                <option value="">Select Customers Email</option>
+                                <?php foreach ($customers as $customer) : ?>
+                                    <option value="<?= $customer['email'] ?>"><?= $customer['email'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" />
+                        </div>
+
+                        <div>
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit">Send Email </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer"></div>
 </body>
 
 </html>

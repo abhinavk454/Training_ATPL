@@ -44,6 +44,7 @@ $routes->get('/user-logout', 'Home::user_logout');
 $routes->get('/add-customer', 'Home::add_customer');
 $routes->post('/add-customer', 'Home::add_customer_action');
 $routes->get('/view-customer', 'Home::view_customer');
+$routes->post('/view-customer', 'Home::view_customer');
 $routes->get('/user-login', 'Home::user_login');
 $routes->post('/user-login-actions', 'Home::user_login_actions');
 $routes->get('/user-dashboard', 'Home::user_dashboard');
@@ -51,6 +52,8 @@ $routes->post('/user-dashboard', 'Home::user_dashboard');
 $routes->get('/user-loan', 'Home::user_loan');
 $routes->post('/handle-loan', 'Home::handle_loan');
 $routes->get('/user-loan-history', 'Home::user_loan_history');
+$routes->get('/email', 'EmailController::index');
+$routes->post('/email', 'EmailController::mail_ji');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
