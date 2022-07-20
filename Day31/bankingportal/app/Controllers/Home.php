@@ -62,7 +62,7 @@ class Home extends BaseController
             'account_number' => $account_number,
             'balance' => $balance
         ]);
-        return redirect()->to('/view-customers');
+        return redirect()->to('/view-customer');
     }
     public function view_customer()
     {
@@ -74,7 +74,7 @@ class Home extends BaseController
     {
         $customerModel = new \App\Models\CustomerModel();
         $customerModel->delete($id);
-        return redirect()->to('/view-customers');
+        return redirect()->to('/view-customer');
     }
     public function user_login()
     {
@@ -97,11 +97,11 @@ class Home extends BaseController
                 return redirect()->to('/user-dashboard');
             } else {
                 echo "<script> alert('Password is incorrect')</script>";
-                return redirect()->to('/user-dashboard');
+                return redirect()->to('/user-login');
             }
         } else {
             echo "<script> alert('Email is incorrect')</script>";
-            return redirect()->to('/user-dashboard');
+            return redirect()->to('/user-login');
         }
     }
     public function user_dashboard()
@@ -148,5 +148,37 @@ class Home extends BaseController
         $loanModel = new \App\Models\loanModel();
         $loans = $loanModel->findAll();
         return view('view-loans', ['loans' => $loans]);
+    }
+    public function delete_loan($id)
+    {
+        $loanModel = new \App\Models\loanModel();
+        $loanModel->delete($id);
+        return redirect()->to('/view-loan');
+    }
+    public function approve_loan($id)
+    {
+        $loanModel = new \App\Models\loanModel();
+        $loanModel->where('loan_id', $id)->set('loan_status', 'approved')->update();
+        return redirect()->to('/view-loan');
+    }
+    public function reject_loan($id)
+    {
+        $loanModel = new \App\Models\loanModel();
+        $loanModel->where('loan_id', $id)->set('loan_status', 'rejected')->update();
+        return redirect()->to('/view-loan');
+    }
+    public function change_password()
+    {
+        return view('change-password');
+    }
+    public function change_password_action()
+    {
+        $request = \Config\Services::request();
+        $userModel = new \App\Models\customerModel();
+        $user_id = session()->get('user_id');
+        $password = $request->getVar('password');
+        $userModel->where('user_id', $user_id)->set('password', $password)->update();
+        echo "<script> alert('Password changed')</script>";
+        return redirect()->to('/user-dashboard');
     }
 }

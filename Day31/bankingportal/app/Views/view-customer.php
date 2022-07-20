@@ -26,6 +26,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            background-image: linear-gradient(to right, #0074ff 0%, #0074f0 100%);
             width: 100%;
             height: 10%;
             padding: 25px;
@@ -69,14 +70,16 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+
             width: 100%;
             height: 90%;
         }
 
         th,
-        td {
-            padding: 2px;
+        td,
+        th {
+            align-items: center;
+            padding: 6px;
         }
     </style>
 </head>
@@ -104,6 +107,7 @@
         </div>
     </div>
     <div class="container">
+        <h3>All Customers</h3>
         <?php
         if (isset($customers)) {
             echo "<table border='1' cellspacing='0' cellpadding='3'  >";
@@ -113,7 +117,7 @@
             echo "<th>Account Number</th>";
             echo "<th>Balance</th>";
             echo "<th>Password</th>";
-            // echo "<th>Action</th>";
+            echo "<th>Action</th>";
             echo "</tr>";
             foreach ($customers as $customer) {
                 echo "<tr>";
@@ -122,7 +126,7 @@
                 echo "<td>" . $customer['account_number'] . "</td>";
                 echo "<td>" . $customer['balance'] . "</td>";
                 echo "<td>" . $customer['password'] . "</td>";
-                // echo "<td><a href='" . site_url('/edit-customer/' . $customer['user_id']) . "'>Edit</a> | <a href='" . site_url('/delete-customer/' . $customer['user_id']) . "'>Delete</a></td>";
+                echo "<td><a href='" . site_url('/delete-customer/' . $customer['user_id']) . "'>Delete</a></td>";
                 echo "</tr>";
             }
             echo "</table>";

@@ -30,7 +30,6 @@
             align-items: center;
             justify-content: space-around;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
         .h2 {
@@ -75,10 +74,21 @@
             outline: none;
             border: none;
         }
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
     </style>
 </head>
 
 <body>
+    <div class="left">
+        <h1>Bank Management Portal</h1>
+    </div>
     <div class="main">
         <div class="h2">Admin Login</div>
         <form action="<?= site_url('/login') ?>" method="post">

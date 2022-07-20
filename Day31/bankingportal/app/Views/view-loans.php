@@ -26,6 +26,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            background-image: linear-gradient(to right, #0074ff 0%, #0074f0 100%);
             width: 100%;
             height: 10%;
             padding: 25px;
@@ -65,9 +66,17 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+
             width: 100%;
             height: 90%;
+        }
+
+        tr,
+        td,
+        th {
+            text-align: center;
+            padding: 4px;
+            margin: 6px;
         }
     </style>
 </head>
@@ -95,6 +104,7 @@
         </div>
     </div>
     <div class="container">
+        <h3>Loan Requests</h3>
         <?php
         if (isset($loans)) {
             echo "<table border='1' cellspacing='0' cellpadding='3'  >";
@@ -114,7 +124,13 @@
                 echo "<td>" . $loan['loan_duration'] . "</td>";
                 echo "<td>" . $loan['loan_interest'] . "</td>";
                 echo "<td>" . $loan['loan_status'] . "</td>";
-                echo "<td><a href='" . site_url('/approve-loan/' . $loan['loan_id']) . "'>Accept</a> | <a href='" . site_url('/reject-loan/' . $loan['loan_id']) . "'>Reject</a></td>";
+                if ($loan['loan_status'] == 'approved') {
+                    echo "<td>No Action Needed</td>";
+                } elseif ($loan['loan_status'] == 'rejected') {
+                    echo "<td>No Action Needed</td>";
+                } else {
+                    echo "<td><a href='" . site_url('/approve-loan/' . $loan['loan_id']) . "'>Accept</a> | <a href='" . site_url('/reject-loan/' . $loan['loan_id']) . "'>Reject</a></td>";
+                }
                 echo "</tr>";
             }
         }

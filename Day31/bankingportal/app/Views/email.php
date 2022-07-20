@@ -26,6 +26,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            background-image: linear-gradient(to right, #0074ff 0%, #0074f0 100%);
             width: 100%;
             height: 10%;
             padding: 25px;
@@ -65,7 +66,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+
             width: 100%;
             height: 90%;
         }
@@ -73,7 +74,6 @@
         form {
             width: 500px;
             height: 500px;
-            background-color: #fda085;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -87,7 +87,6 @@
             margin-top: 10px;
             padding: 10px 20px;
             text-align: center;
-            background-color: #f6d365;
             border: none;
             border-radius: 5px;
         }
@@ -106,7 +105,6 @@
             padding: 10px 20px;
             text-align: center;
             border: none;
-            background-color: #f6d365;
             border-radius: 5px;
         }
     </style>

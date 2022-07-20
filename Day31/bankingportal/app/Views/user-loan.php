@@ -26,6 +26,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            background-image: linear-gradient(to right, #0074ff 0%, #0074f0 100%);
             width: 100%;
             height: 10%;
             padding: 25px;
@@ -51,7 +52,6 @@
         .man {
             width: 400px;
             height: 500px;
-            background-color: #fda085;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -75,7 +75,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+
             width: 100%;
             height: 90%;
         }
@@ -100,7 +100,6 @@
         input[type="number"] {
             width: 300px;
             border-radius: 5px;
-            background-color: #f6d365;
             color: black;
         }
 

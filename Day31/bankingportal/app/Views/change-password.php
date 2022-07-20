@@ -67,6 +67,7 @@
             background-color: darkgreen;
             color: white;
             border: none;
+            margin-top: 10px;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 12px;
@@ -80,8 +81,39 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+
             width: 100%;
             height: 90%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        input {
+            padding: 15px 40px;
+            margin-top: 20px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 300px;
+            border-radius: 5px;
+            color: black;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            border-radius: 5px;
+            background-color: darkgreen;
+            color: white;
         }
     </style>
 </head>
@@ -108,28 +140,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="man">
-            <h2>Name : <?php
-                        $session = session();
-                        echo $session->get('name');
-                        ?></h2>
-            <h3>Email : <?php
-                        $session = session();
-                        echo $session->get('email');
-                        ?></h3>
-            <h4>
-                Account number : <?php
-                                    $session = session();
-                                    echo $session->get('account_number');
-                                    ?>
-            </h4>
-            <h4>
-                Balance : <?php
-                            $session = session();
-                            echo $session->get('balance');
-                            ?>
-            </h4>
-        </div>
+        <form action="<?= site_url('/change-password') ?> " method="post">
+            <input type="text" placeholder="Enter New Password" name="password" required>
+            <input type="text" placeholder="Confirm New Password" name="confirm_password" required>
+            <button type="submit" name="submit">Change Password</button>
+        </form>
     </div>
     <div class="footer"></div>
 </body>

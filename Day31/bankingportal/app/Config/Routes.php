@@ -33,6 +33,7 @@ $routes->set404Override();
  * --------------------------------------------------------------------
  */
 
+
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
@@ -45,6 +46,8 @@ $routes->get('/add-customer', 'Home::add_customer');
 $routes->post('/add-customer', 'Home::add_customer_action');
 $routes->get('/view-customer', 'Home::view_customer');
 $routes->post('/view-customer', 'Home::view_customer');
+$routes->get('/delete-customer/(:num)', 'Home::delete_customer/$1');
+$routes->post('/delete-customer/(:num)', 'Home::delete_customer/$1');
 $routes->get('/view-loan', 'Home::view_loan');
 $routes->post('/view-loan', 'Home::view_loan');
 $routes->get('/user-login', 'Home::user_login');
@@ -56,6 +59,12 @@ $routes->post('/handle-loan', 'Home::handle_loan');
 $routes->get('/user-loan-history', 'Home::user_loan_history');
 $routes->get('/email', 'EmailController::index');
 $routes->post('/email', 'EmailController::mail_ji');
+$routes->get('/approve-loan/(:num)', 'Home::approve_loan/$1');
+$routes->post('/approve-loan/(:num)', 'Home::approve_loan/$1');
+$routes->get('/reject-loan/(:num)', 'Home::reject_loan/$1');
+$routes->post('/reject-loan/(:num)', 'Home::reject_loan/$1');
+$routes->get('/change-password', 'Home::change_password');
+$routes->post('/change-password', 'Home::change_password_action');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
