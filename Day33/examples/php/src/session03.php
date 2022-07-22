@@ -18,9 +18,11 @@
 </head>
 
 <body>
-    <h3>Home</h3>
-    <hr>
-    <a href="./logout.php">Log Out</a>
+    <center>
+        <h3>Home</h3>
+        <hr>
+        <a href="./logout.php">Log Out</a>
+    </center>
 </body>
 
 </html>

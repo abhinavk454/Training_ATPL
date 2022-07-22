@@ -9,18 +9,20 @@
 </head>
 
 <body>
-    <form action="./session01.php" method="post">
-        <h1>User Login</h1>
-        <h2>Enter Your Name
-            <input type="text" name="uname">
-        </h2>
-        <h2>Enter Password
-            <input type="text" name="password">
-        </h2>
-        <h2>Click to
-            <input type="submit" name="sub" value="login">
-        </h2>
-    </form>
+    <center>
+        <form action="./session01.php" method="post">
+            <h1>User Login</h1>
+            <h2>Enter Your Name
+                <input type="text" name="uname">
+            </h2>
+            <h2>Enter Password
+                <input type="text" name="password">
+            </h2>
+            <h2>Click to
+                <input type="submit" name="sub" value="login">
+            </h2>
+        </form>
+    </center>
 </body>
 
 </html>

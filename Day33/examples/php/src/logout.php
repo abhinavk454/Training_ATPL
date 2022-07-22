@@ -6,5 +6,7 @@ session_destroy();
 ?>
 
 <body>
-    <h2>Logout Successfully.</h2>
+    <center>
+        <h2>Logout Successfully.</h2>
+    </center>
 </body>
