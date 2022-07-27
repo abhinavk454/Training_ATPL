@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+body {
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./stbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.right {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgba(70, 131, 180, 0.616);
+}
+
+form > input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-family: "Dancing Script", cursive;
+}
+
+input,
+select,
+option {
+  font-family: "Dancing Script", cursive;
+}
+
+button {
+  padding: 10px 30px;
+  border: none;
+  background-color: rgb(40, 153, 201);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Dancing Script", cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 130px;
+  background-color: cornflowerblue;
+  font-size: 18px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  background: black;
+}
