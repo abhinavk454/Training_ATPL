@@ -1,0 +1,18 @@
+{
+  "name": "ClassAssign",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "daisyui": "^2.22.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "watch": "tailwindcss -i ./public/main.css -o ./public/style.css --watch",
+    "dev": "nodemon src/index.js"
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body class="flex flex-col items-center justify-around w-screen">
+    <h1 class="text-3xl">Registration Form</h1>
+    <form
+      action="add-user"
+      method="post"
+      class="flex flex-col justify-center items-center w-[40%] rounded-md shadow-lg p-10"
+    >
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Your Name</span>
+        </label>
+        <label class="input-group">
+          <span>Name</span>
+          <input
+            type="text"
+            placeholder="Alpha Panda"
+            class="input input-bordered"
+            name="name"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Screen Name</span>
+        </label>
+        <label class="input-group">
+          <span>Screen Name</span>
+          <input
+            type="text"
+            placeholder="Alpha420"
+            class="input input-bordered"
+            name="screen_name"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Date Of Birth</span>
+        </label>
+        <label class="input-group">
+          <span>Date Of Birth</span>
+          <input
+            type="date"
+            placeholder="Alpha420"
+            class="input input-bordered"
+            name="screen_name"
+          />
+        </label>
+      </div>
+      <div class="form-control flex flex-row mt-5 mb-5">
+        <span class="mr-10">Gender</span>
+        <input
+          type="radio"
+          name="radio-3"
+          class="radio radio-secondary mr-3"
+          checked
+        />
+        Male
+        <input type="radio" name="radio-3" class="radio radio-secondary mr-3" />
+        Female
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Country</span>
+        </label>
+        <label class="input-group">
+          <span>Country</span>
+          <select class="select w-small max-w-xs">
+            <option disabled selected>Pick your Country</option>
+            <option>INDIA</option>
+            <option>USA</option>
+            <option>AUS</option>
+            <option>AFG</option>
+            <option>TURKEY</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <label class="input-group">
+          <span>Email</span>
+          <input
+            type="text"
+            placeholder="alpha@email.com"
+            class="input input-bordered"
+            name="email"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Phone</span>
+        </label>
+        <label class="input-group">
+          <span>Phone</span>
+          <input
+            type="text"
+            placeholder="+91-1234567890"
+            class="input input-bordered"
+            name="phone"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Password</span>
+        </label>
+        <label class="input-group">
+          <span>Password</span>
+          <input
+            type="password"
+            placeholder="********"
+            class="input input-bordered"
+            name="password"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="cursor-pointer label">
+          <span class="label-text">I agree to term and conditions </span>
+
+          <input
+            type="checkbox"
+            checked="checked"
+            class="checkbox checkbox-accent"
+          />
+        </label>
+      </div>
+      <input type="submit" value="Signup" class="btn btn-primary w-64" />
+    </form>
+  </body>
+</html>

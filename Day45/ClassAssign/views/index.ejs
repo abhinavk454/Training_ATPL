@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body class="flex flex-col m-auto h-screen">
+    <h2 class="text-center mt-10 text-3xl">Contact Us</h2>
+    <form
+      action="contact-us"
+      method="post"
+      class="flex flex-col items-center justify-center m-auto text-center"
+    >
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Your Email</span>
+        </label>
+        <label class="input-group">
+          <span>Email</span>
+          <input
+            type="email"
+            placeholder="info@site.com"
+            class="input input-bordered"
+            name="email"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Name</span>
+        </label>
+        <label class="input-group">
+          <span>Name</span>
+          <input
+            type="text"
+            placeholder="Alpha Pandey"
+            class="input input-bordered"
+            name="name"
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Message</span>
+        </label>
+        <label class="input-group">
+          <span>Message</span>
+          <textarea
+            placeholder="Hello, I am Alpha Pandey"
+            class="input input-bordered"
+            name="message"
+          ></textarea>
+        </label>
+      </div>
+      <input type="submit" class="btn btn-primary w-48 mt-10" value="SEND" />
+    </form>
+  </body>
+</html>
