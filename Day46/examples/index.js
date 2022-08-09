@@ -3,8 +3,16 @@ const conn = require("./connect_db");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.set("view engine", "ejs");
+
+/**
+ * GET form page
+ */
+app.get("/assign43", (req, res) => {
+  res.render("assign");
+});
 
 app.get("/", (req, res) => {
   res.render("update", {
