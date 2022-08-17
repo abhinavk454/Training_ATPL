@@ -2,9 +2,8 @@ import { Router } from "express";
 import { ifLoggedAdmin } from "../middlewares/iflogged.middlewares.js";
 import { hasSessionAdmin } from "../middlewares/hassession.middlewares.js";
 import { PrismaClient } from "@prisma/client";
-
+import session from "express-session";
 const router = Router();
-
 /**
  * Admin Dashboard Route
  * @params req, res, next
@@ -65,6 +64,82 @@ router.post("/login", (req, res, next) => {
         res.redirect("/admin/login");
       }
     });
+});
+
+/**
+ * Admin Dashboard Routes
+ */
+
+router.get("/storage", ifLoggedAdmin, (req, res, next) => {
+  const store = new PrismaClient();
+  store.storage
+    .findMany()
+    .then((storages) => {
+      console.log(storages);
+      req.session.storages = storages;
+      res.render("admin/storage", {
+        title: "Storage",
+        storages: storages,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  store.$disconnect();
+});
+
+router.get("/orders", ifLoggedAdmin, (req, res, next) => {
+  const store = new PrismaClient();
+  store.order
+    .findMany()
+    .then((orders) => {
+      console.log(orders);
+      req.session.orders = orders;
+      res.render("admin/orders", {
+        title: "Orders",
+        orders: orders,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  store.$disconnect();
+});
+
+router.get("/shipments", ifLoggedAdmin, (req, res, next) => {
+  const store = new PrismaClient();
+  store.shipments
+    .findMany()
+    .then((shipments) => {
+      console.log(shipments);
+      req.session.shipments = shipments;
+      res.render("admin/shipments", {
+        title: "Shipments",
+        shipments: shipments,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  store.$disconnect();
+});
+
+router.get("/items", ifLoggedAdmin, (req, res, next) => {
+  res.render("admin/items", {
+    title: "Items",
+  });
+});
+
+router.get("/add-order", ifLoggedAdmin, (req, res, next) => {
+  res.render("admin/add-order", {
+    title: "Add Order",
+  });
+});
+
+router.get("/add-shipment", ifLoggedAdmin, (req, res, next) => {
+  res.render("admin/add-shipment", {
+    title: "Add Shipment",
+  });
 });
 
 /**

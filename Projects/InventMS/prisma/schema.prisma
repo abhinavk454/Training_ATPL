@@ -23,24 +23,18 @@ model Manager {
 }
 
 model Storage {
-  sno     Int     @id @default(autoincrement())
-  barcode Int     @unique
-  name    String?
+  sno      Int     @id @default(autoincrement())
+  barcode  Int     @unique
+  name     String?
+  quantity Int?
 }
 
 model Items {
-  ino         Int        @id @default(autoincrement())
-  barcode     Int        @unique
+  ino         Int     @id @default(autoincrement())
+  barcode     Int     @unique
   description String?
-  Inventory   Inventory?
+  price       Float   @db.Float
   Order       Order?
-}
-
-model Inventory {
-  id       Int   @id @default(autoincrement())
-  itemId   Int   @unique
-  quantity Int
-  items    Items @relation(fields: [itemId], references: [ino])
 }
 
 model Order {
@@ -49,8 +43,8 @@ model Order {
   itemId        Int        @unique
   quantity      Int        @default(0)
   barcode       Int        @unique
-  dateRequired  DateTime?
-  dateCompleted DateTime?
+  dateRequired  DateTime?  @db.Date
+  dateCompleted DateTime?  @db.Date
   items         Items      @relation(fields: [itemId], references: [ino])
   Shipments     Shipments?
 }
@@ -59,5 +53,6 @@ model Shipments {
   shipmentDate DateTime
   id           Int      @id @default(autoincrement())
   orderNo      Int      @unique
+  ship_time    Int?
   order        Order    @relation(fields: [orderNo], references: [orderNo])
 }

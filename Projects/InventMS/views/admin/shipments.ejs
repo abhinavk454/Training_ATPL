@@ -47,8 +47,56 @@
         </div>
       </div>
     </div>
-    <div
-      class="flex w-[92%] h-screen items-center bg-[url('/bgp.svg')] bg-no-repeat bg-contain bg-center justify-center"
-    ></div>
+    <div class="flex flex-col h-[90%] w-screen items-center justify-between">
+      <div
+        class="flex w-screen h-[10%] justify-between text-center items-center p-5"
+      >
+        <div class="text-xl">Shipping</div>
+        <div class="">
+          <a href="/admin/items" class="btn btn-primary">ADD </a>
+        </div>
+      </div>
+      <div class="overflow-x-auto h-[90%] w-full p-5">
+        <table
+          class="table w-full table-zebra table-compact hover items-center"
+        >
+          <thead>
+            <tr>
+              <th>Shipping ID</th>
+              <th>Shipping Date</th>
+              <th>Order No</th>
+              <th>Shipping Days</th>
+              <th>Modify</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% shipments.forEach(function(shipment) { %>
+            <tr>
+              <td><%= shipment.id %></td>
+              <td><%= shipment.shipmentDate %></td>
+              <td><%= shipment.orderNo %></td>
+              <td><%= shipment.ship_time %></td>
+              <td>
+                <a href="/admin/shipment/edit/<%= shipment.id %>">
+                  <img src="/edit.svg" alt="edit" width="30px" height="30px" />
+                </a>
+              </td>
+              <td>
+                <a href="/admin/shipment/delete/<%= shipment.id %>">
+                  <img
+                    src="/delete.svg"
+                    alt="delete"
+                    width="30px"
+                    height="30px"
+                  />
+                </a>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>

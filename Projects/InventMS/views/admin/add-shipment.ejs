@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin: Dashboard</title>
+    <title>Admin: <%= title%></title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   </head>
   <body class="flex flex-col w-screen h-screen">
@@ -13,9 +13,7 @@
     >
       <div class="navbar">
         <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl" href="/admin/"
-            >Welcome to InventMS</a
-          >
+          <a class="btn btn-ghost normal-case text-xl">Welcome to InventMS</a>
         </div>
         <div class="flex-none">
           <div class="dropdown dropdown-end">
@@ -35,7 +33,6 @@
                 </a>
               </li>
               <li><a href="/admin/storage">Storage</a></li>
-              <p></p>
               <li><a href="/admin/items">Add Items</a></li>
               <li><a href="/admin/orders">Orders</a></li>
               <li><a href="/admin/add-order">Add Order</a></li>
@@ -47,8 +44,33 @@
         </div>
       </div>
     </div>
-    <div
-      class="flex w-[92%] h-screen items-center bg-[url('/bgp.svg')] bg-no-repeat bg-contain bg-center justify-center"
-    ></div>
+    <div class="flex w-[92%] h-screen items-center justify-center">
+      <form
+        class="flex flex-col justify-around h-[50%]"
+        action="/admin/add-shipment"
+        method="post"
+      >
+        <input
+          type="number"
+          name="ship_days"
+          placeholder="Shipping Days"
+          class="input"
+          required
+        />
+        <input
+          type="number"
+          name="order_no"
+          placeholder="Order No"
+          class="input"
+          required
+        />
+        <label for="ship_d"
+          >Shipping Date
+          <input type="date" name="ship_d" class="input input-date" />
+        </label>
+
+        <input type="submit" value="ADD" class="btn btn-primary btn-wide" />
+      </form>
+    </div>
   </body>
 </html>
