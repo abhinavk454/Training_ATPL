@@ -79,9 +79,11 @@ if ($_SESSION['role'] != 'admin') {
         .u1,
         .u2,
         .u3,
+        .u4,
         .l1,
         .l2,
-        .l3 {
+        .l3,
+        .l4 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -119,6 +121,40 @@ if ($_SESSION['role'] != 'admin') {
             text-transform: uppercase;
             font-size: 40px;
         }
+
+        .u1 {
+            background-image: url("./view_S.png");
+            background-position: top;
+        }
+
+        .u2 {
+            background-image: url("./exam.svg");
+            background-size: contain;
+        }
+
+        .u3 {
+            background-image: url("./notes.svg");
+            background-size: contain;
+        }
+
+        .u4 {}
+
+        .l1 {
+            background-image: url("./eval.svg");
+            background-size: contain;
+        }
+
+        .l2 {
+            background-image: url("./course.svg");
+            background-size: contain;
+        }
+
+        .l3 {
+            background-image: url("./certi.svg");
+            background-size: contain;
+        }
+
+        .l4 {}
     </style>
 </head>
 
@@ -132,36 +168,44 @@ if ($_SESSION['role'] != 'admin') {
         <div class="alo">
             <div class="u1">
                 <a href="">
+                    Add Student
                 </a>
             </div>
             <div class="u2">
                 <a href="">
+                    Add Manager
                 </a>
             </div>
             <div class="u3">
                 <a href="">
+                    Add Faculty
                 </a>
             </div>
-            <div class="u3">
+            <div class="u4">
                 <a href="">
+                    Add Course
                 </a>
             </div>
         </div>
         <div class="dlo">
             <div class="l1">
                 <a href="">
+                    Add Schedule
                 </a>
             </div>
             <div class="l2">
                 <a href="">
+                    View Student
                 </a>
             </div>
             <div class="l3">
                 <a href="">
+                    View Faculty
                 </a>
             </div>
-            <div class="l3">
+            <div class="l4">
                 <a href="">
+                    View Manager
                 </a>
             </div>
         </div>
